@@ -3,12 +3,11 @@ package org.hyperion.rs2.packet;
 import org.hyperion.rs2.Constants;
 import org.hyperion.rs2.ScriptManager;
 import org.hyperion.rs2.action.Action;
-import org.hyperion.rs2.model.DialogueManager;
+import org.hyperion.rs2.model.Mob.InteractionMode;
 import org.hyperion.rs2.model.NPC;
 import org.hyperion.rs2.model.NPCDefinition;
 import org.hyperion.rs2.model.Player;
 import org.hyperion.rs2.model.World;
-import org.hyperion.rs2.model.Mob.InteractionMode;
 import org.hyperion.rs2.model.combat.impl.MagicCombatAction;
 import org.hyperion.rs2.model.combat.impl.MagicCombatAction.Spell;
 import org.hyperion.rs2.model.combat.impl.MagicCombatAction.SpellBook;
@@ -79,17 +78,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 						this.stop();
 						return;
 					}
-					if(npc.getDefinition().getInteractionMenu()[0].startsWith("Talk")) {
-						if(npc.getDefinition().getName().toLowerCase().contains("banker")) {
-							DialogueManager.openDialogue(player, 0);
-						} else {
-							String scriptName = "talkTo" + npc.getDefinition().getId();
-							if(!ScriptManager.getScriptManager().invokeWithFailTest(scriptName, player, npc)) {
-								player.getActionSender().sendMessage(npc.getDefinedName() + " does not want to talk.");							
-							}
-						}
-						npc.setInteractingEntity(InteractionMode.TALK, player);
-					}
+					//TODO
 					this.stop();
 				}
 				@Override

@@ -20,23 +20,23 @@ import org.hyperion.rs2.model.NPC;
 import org.hyperion.rs2.model.NPCDefinition;
 import org.hyperion.rs2.model.NPCSpawn;
 import org.hyperion.rs2.model.Player;
+import org.hyperion.rs2.model.Player.Rights;
 import org.hyperion.rs2.model.Shop;
 import org.hyperion.rs2.model.Skills;
-import org.hyperion.rs2.model.World;
-import org.hyperion.rs2.model.Animation.FacialAnimation;
-import org.hyperion.rs2.model.Player.Rights;
 import org.hyperion.rs2.model.UpdateFlags.UpdateFlag;
+import org.hyperion.rs2.model.World;
 import org.hyperion.rs2.model.boundary.BoundaryManager;
 import org.hyperion.rs2.model.combat.impl.MagicCombatAction;
 import org.hyperion.rs2.model.container.Bank;
 import org.hyperion.rs2.model.container.Equipment;
 import org.hyperion.rs2.model.region.Region;
 import org.hyperion.rs2.net.Packet;
-import org.hyperion.rs2.net.ActionSender.DialogueType;
 import org.hyperion.rs2.tickable.Tickable;
 import org.hyperion.rs2.util.NameUtils;
 import org.hyperion.rs2.util.TextUtils;
 import org.hyperion.util.XMLController;
+
+import dialogues.HansDialogue;
 
 
 /**
@@ -190,12 +190,12 @@ public class CommandPacketHandler implements PacketHandler {
 				player.getActionSender().sendRunScript(115, new Object[] { 1 }, "i");
 			} else if(command.equals("removechat")) {
 				player.getActionSender().sendRunScript(108, new Object[] { "" }, "");
-			} else if(command.equals("npcdial")) {
-				player.getActionSender().sendDialogue("Grim Reaper", DialogueType.NPC, 6390, FacialAnimation.DEFAULT, "1", "2", "3", "4");
-			} else if(command.equals("pldial")) {
-				player.getActionSender().sendDialogue(player.getName(), DialogueType.PLAYER, -1, FacialAnimation.DEFAULT, "1");
-			} else if(command.equals("opdial")) {
-				player.getActionSender().sendDialogue(player.getName(), DialogueType.MESSAGE, -1, FacialAnimation.DEFAULT, "Opt 1", "Yespls", "Haha");
+//			} else if(command.equals("npcdial")) {
+//				player.getActionSender().sendDialogue("Grim Reaper", DialogueType.NPC, 6390, FacialAnimation.DEFAULT, "1", "2", "3", "4");
+//			} else if(command.equals("pldial")) {
+//				player.getActionSender().sendDialogue(player.getName(), DialogueType.PLAYER, -1, FacialAnimation.DEFAULT, "1");
+//			} else if(command.equals("opdial")) {
+//				player.getActionSender().sendDialogue(player.getName(), DialogueType.MESSAGE, -1, FacialAnimation.DEFAULT, "Opt 1", "Yespls", "Haha");
 			} else if(command.startsWith("object")) {
 				World.getWorld().register(new GameObject(player.getLocation(), Integer.parseInt(args[1]), 10, 0, false));
 			} else if(command.startsWith("pnpc")) {
@@ -461,6 +461,8 @@ public class CommandPacketHandler implements PacketHandler {
 							System.exit(0);
 						}						
 					});
+				} else if(command.startsWith("penis")) {
+					player.getDialogueManager().start(new HansDialogue(player));
 				} else if(command.startsWith("spawn")) {
 					NPC npc = new NPC(NPCDefinition.forId(Integer.parseInt(args[1])), Location.create(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()), player.getLocation(), player.getLocation(), 6);
 					World.getWorld().register(npc);

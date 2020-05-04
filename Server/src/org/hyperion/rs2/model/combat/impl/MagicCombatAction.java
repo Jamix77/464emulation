@@ -10,7 +10,6 @@ import org.hyperion.rs2.Constants;
 import org.hyperion.rs2.ScriptManager;
 import org.hyperion.rs2.action.Action;
 import org.hyperion.rs2.model.Animation;
-import org.hyperion.rs2.model.DialogueManager;
 import org.hyperion.rs2.model.Entity;
 import org.hyperion.rs2.model.Graphic;
 import org.hyperion.rs2.model.Hit;
@@ -372,10 +371,7 @@ public class MagicCombatAction extends AbstractCombatAction {
 					}
 				}
 			});
-		} else if(spell == Spell.SPELLBOOK_SWAP && !mob.getCombatState().spellbookSwap()) {
-			if(mob.isPlayer()) {
-				DialogueManager.openDialogue((Player) mob, 12);
-			}
+		
 		} else if (ScriptManager.getScriptManager().invokeWithFailTest(spell.getSpellName(), args)) {		
 			for(int i = 0; i < spell.getRunes().length; i++) {
 				if(mob.getInventory() != null && spell.getRune(i) != null) {

@@ -29,10 +29,10 @@ import org.hyperion.rs2.model.combat.impl.MagicCombatAction.Spell;
 import org.hyperion.rs2.model.container.Bank;
 import org.hyperion.rs2.model.container.BankInfo;
 import org.hyperion.rs2.model.container.Container;
+import org.hyperion.rs2.model.container.Container.Type;
 import org.hyperion.rs2.model.container.Equipment;
 import org.hyperion.rs2.model.container.Inventory;
 import org.hyperion.rs2.model.container.Trade;
-import org.hyperion.rs2.model.container.Container.Type;
 import org.hyperion.rs2.model.region.Region;
 import org.hyperion.rs2.net.ActionSender;
 import org.hyperion.rs2.net.ISAACCipher;
@@ -40,6 +40,7 @@ import org.hyperion.rs2.net.Packet;
 import org.hyperion.rs2.util.IoBufferUtils;
 import org.hyperion.rs2.util.NameUtils;
 import org.hyperion.rs2.util.TextUtils;
+import org.hyperion.rs2.model.dialogue.DialogueManager;
 
 
 /**
@@ -307,6 +308,11 @@ public class Player extends Mob implements Persistable {
 	 * The player's settings.
 	 */
 	private final Settings settings = new Settings();
+	
+	/**
+	 * The player's dialogue manager.
+	 */
+	private final DialogueManager dialogueManager = new DialogueManager(this);
 
 	/*
 	 * Cached details.
@@ -1466,6 +1472,10 @@ public class Player extends Mob implements Persistable {
 	@Override
 	public int getProjectileId() {
 		return -1;
+	}
+
+	public DialogueManager getDialogueManager() {
+		return dialogueManager;
 	}
 
   }

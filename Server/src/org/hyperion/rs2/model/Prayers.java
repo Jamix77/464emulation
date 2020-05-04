@@ -3,8 +3,8 @@ package org.hyperion.rs2.model;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.hyperion.rs2.model.Animation.FacialAnimation;
 import org.hyperion.rs2.model.boundary.BoundaryManager;
+import org.hyperion.rs2.model.dialogue.DialogueExpression;
 import org.hyperion.rs2.net.ActionSender;
 import org.hyperion.rs2.net.ActionSender.DialogueType;
 import org.hyperion.rs2.tickable.impl.PrayerUpdateTick;
@@ -291,24 +291,24 @@ public class Prayers {
 		ActionSender action = player.getActionSender();
 		if(BoundaryManager.isWithinBoundaryNoZ(player.getLocation(), "Fremennik Trials")) {
 			player.getActionSender().sendConfig(Prayer.forId(id).getClientConfiguration(), 0);
-			action.sendDialogue("", DialogueType.MESSAGE, -1, FacialAnimation.DEFAULT, "Skulgrimen's magic prevents you from using prayers.");
+			action.sendDialogue("", DialogueType.MESSAGE, -1, DialogueExpression.NORMAL, "Skulgrimen's magic prevents you from using prayers.");
 			return;
 		}
 		Prayer prayer = Prayer.forId(id);
 		action.removeAllInterfaces();
 		if(player.getSkills().getLevelForExperience(Skills.PRAYER) < prayer.getLevelRequired()) {
-			action.sendDialogue("", DialogueType.MESSAGE, -1, FacialAnimation.DEFAULT, "You need a <col=FF>Prayer level of " + prayer.getLevelRequired() + " to use " + prayer.getPrayerName() + ".");
+			action.sendDialogue("", DialogueType.MESSAGE, -1, DialogueExpression.NORMAL, "You need a <col=FF>Prayer level of " + prayer.getLevelRequired() + " to use " + prayer.getPrayerName() + ".");
 			return;
 		}
 		if(id == CHIVALRY) {
 			if(player.getSkills().getLevelForExperience(Skills.DEFENCE) < 65) {
-				action.sendDialogue("", DialogueType.MESSAGE, -1, FacialAnimation.DEFAULT, "You need a <col=FF>Defence level of 65 to use " + prayer.getPrayerName() + ".");
+				action.sendDialogue("", DialogueType.MESSAGE, -1, DialogueExpression.NORMAL, "You need a <col=FF>Defence level of 65 to use " + prayer.getPrayerName() + ".");
 				return;
 			}
 		}
 		if(id == PIETY) {
 			if(player.getSkills().getLevelForExperience(Skills.DEFENCE) < 70) {
-				action.sendDialogue("", DialogueType.MESSAGE, -1, FacialAnimation.DEFAULT, "You need a <col=FF>Defence level of 70 to use " + prayer.getPrayerName() + ".");
+				action.sendDialogue("", DialogueType.MESSAGE, -1, DialogueExpression.NORMAL, "You need a <col=FF>Defence level of 70 to use " + prayer.getPrayerName() + ".");
 				return;
 			}
 		}

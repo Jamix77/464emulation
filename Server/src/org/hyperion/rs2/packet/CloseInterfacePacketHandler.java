@@ -2,7 +2,6 @@ package org.hyperion.rs2.packet;
 
 import java.util.logging.Logger;
 
-import org.hyperion.rs2.model.DialogueManager;
 import org.hyperion.rs2.model.Player;
 import org.hyperion.rs2.net.Packet;
 
@@ -59,7 +58,7 @@ public class CloseInterfacePacketHandler implements PacketHandler {
 			case 176:
 			case 177:
 			case 519:
-				DialogueManager.advanceDialogue(player, 0);
+				player.getDialogueManager().handle();
 				break;
 			case 210:
 			case 211:
@@ -77,7 +76,8 @@ public class CloseInterfacePacketHandler implements PacketHandler {
 			case 236:
 			case 237:
 			case 238:
-				DialogueManager.advanceDialogue(player, childId - 1);
+				player.getDialogueManager().getCurrentDialogue().setButton(childId-1);
+				player.getDialogueManager().handle();
 				break;
 			default:
 				logger.info("Unhandled close interface : " + interfaceId + " - " + childId);

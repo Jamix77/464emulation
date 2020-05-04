@@ -697,9 +697,6 @@ public class World {
 				cannon.destroy();
 				player.removeAttribute("cannon");
 			}
-			if(player.getAttribute("cutScene") != null) {
-				DialogueManager.openDialogue(player, 123);
-			}
 			if(player.getInterfaceState().getClan().length() > 0) {
 				World.getWorld().getPrivateChat().get(player.getInterfaceState().getClan()).removeClanMember(player);
 			}

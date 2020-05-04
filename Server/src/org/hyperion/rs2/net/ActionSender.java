@@ -8,15 +8,14 @@ import org.hyperion.rs2.model.GroundItem;
 import org.hyperion.rs2.model.Item;
 import org.hyperion.rs2.model.Location;
 import org.hyperion.rs2.model.Mob;
+import org.hyperion.rs2.model.Mob.InteractionMode;
 import org.hyperion.rs2.model.Palette;
+import org.hyperion.rs2.model.Palette.PaletteTile;
 import org.hyperion.rs2.model.Player;
+import org.hyperion.rs2.model.RequestManager.RequestState;
 import org.hyperion.rs2.model.Skills;
 import org.hyperion.rs2.model.Sound;
 import org.hyperion.rs2.model.World;
-import org.hyperion.rs2.model.Animation.FacialAnimation;
-import org.hyperion.rs2.model.Mob.InteractionMode;
-import org.hyperion.rs2.model.Palette.PaletteTile;
-import org.hyperion.rs2.model.RequestManager.RequestState;
 import org.hyperion.rs2.model.boundary.BoundaryManager;
 import org.hyperion.rs2.model.combat.impl.MagicCombatAction.SpellBook;
 import org.hyperion.rs2.model.container.Equipment;
@@ -24,6 +23,7 @@ import org.hyperion.rs2.model.container.Inventory;
 import org.hyperion.rs2.model.container.impl.EquipmentContainerListener;
 import org.hyperion.rs2.model.container.impl.InterfaceContainerListener;
 import org.hyperion.rs2.model.container.impl.WeaponContainerListener;
+import org.hyperion.rs2.model.dialogue.DialogueExpression;
 import org.hyperion.rs2.model.region.Region;
 import org.hyperion.rs2.net.Packet.Type;
 
@@ -1174,7 +1174,7 @@ public class ActionSender {
 		WOODCUTTING_LEVEL_UP
 	}
 	
-	public ActionSender sendDialogue(String title, DialogueType dialogueType, int entityId, FacialAnimation animation, String... text) {
+	public ActionSender sendDialogue(String title, DialogueType dialogueType, int entityId, DialogueExpression animation, String... text) {
 		int interfaceId = -1;
 		switch(dialogueType) {
 		case NPC:
@@ -1186,7 +1186,7 @@ public class ActionSender {
 				interfaceId = 241;
 			}
 			sendNPCHead(entityId, interfaceId, 0);
-			sendInterfaceAnimation(animation.getAnimation().getId(), interfaceId, 0);
+			sendInterfaceAnimation(animation.getId(), interfaceId, 0);
 			sendString(interfaceId, 1, title);
 			for(int i = 0; i < text.length; i++) {
 				sendString(interfaceId, 2 + i, text[i]);
@@ -1202,7 +1202,7 @@ public class ActionSender {
 				interfaceId = 64;
 			}
 			sendPlayerHead(interfaceId, 0);
-			sendInterfaceAnimation(animation.getAnimation().getId(), interfaceId, 0);
+			sendInterfaceAnimation(animation.getId(), interfaceId, 0);
 			sendString(interfaceId, 1, title);
 			for(int i = 0; i < text.length; i++) {
 				sendString(interfaceId, 2 + i, text[i]);

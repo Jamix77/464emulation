@@ -176,10 +176,6 @@ public class Skills {
 			if(mob.isPlayer()) {
 				Player player = (Player) mob;
 				player.checkForSkillcapes();
-				int dialogueId = skill + 76;
-				if(dialogueId != -1) {
-					DialogueManager.openDialogue(player, dialogueId);
-				}
 			}
 		}
 	}
