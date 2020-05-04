@@ -1,5 +1,7 @@
 package org.hyperion.rs2.packet;
 
+import org.hyperion.plugin.PluginManager;
+import org.hyperion.plugin.impl.OptionHandler;
 import org.hyperion.rs2.Constants;
 import org.hyperion.rs2.ScriptManager;
 import org.hyperion.rs2.action.Action;
@@ -71,6 +73,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 		
 		if(npc != null) {
 			player.setInteractingEntity(InteractionMode.TALK, npc);
+
 			Action action = new Action(player, 0) {
 				@Override
 				public void execute() {
@@ -78,7 +81,14 @@ public class NPCOptionPacketHandler implements PacketHandler {
 						this.stop();
 						return;
 					}
-					//TODO
+					OptionHandler p = npc.getDefinition().getHandlers().get("option:" + npc.getDefinition().getInteractionMenu()[0].toLowerCase());
+					if (p == null) {
+						p = (OptionHandler) PluginManager.getOptionHandlerPlugins().get("npc:" + npc.getDefinition().getInteractionMenu()[0].toLowerCase());
+					}
+					if (p != null) {
+						p.handle(player, npc, npc.getDefinition().getInteractionMenu()[0].toLowerCase());
+					}
+					npc.face(player.getLocation());
 					this.stop();
 				}
 				@Override
@@ -125,6 +135,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 		
 		if(npc != null) {
 			player.setInteractingEntity(InteractionMode.TALK, npc);
+			
 			Action action = new Action(player, 0) {
 				@Override
 				public void execute() {
@@ -132,16 +143,14 @@ public class NPCOptionPacketHandler implements PacketHandler {
 						this.stop();
 						return;
 					}
-					if(npc.getDefinition().getInteractionMenu()[2].startsWith("Bank")) {
-					//	Bank.open(player);
-					} else {
-						String scriptName = "tradeWith" + npc.getDefinition().getId();
-						if(!ScriptManager.getScriptManager().invokeWithFailTest(scriptName, player, npc)) {
-							player.getActionSender().sendMessage(npc.getDefinedName() + " does not want to trade.");							
-						} else {
-							npc.setInteractingEntity(InteractionMode.TALK, player);
-						}
+					OptionHandler p = npc.getDefinition().getHandlers().get("option:" + npc.getDefinition().getInteractionMenu()[1].toLowerCase());
+					if (p == null) {
+						p = (OptionHandler) PluginManager.getOptionHandlerPlugins().get("npc:" + npc.getDefinition().getInteractionMenu()[1].toLowerCase());
 					}
+					if (p != null) {
+						p.handle(player, npc, npc.getDefinition().getInteractionMenu()[1].toLowerCase());
+					}
+					npc.face(player.getLocation());
 					this.stop();
 				}
 				@Override

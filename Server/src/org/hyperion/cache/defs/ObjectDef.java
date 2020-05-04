@@ -1,7 +1,10 @@
 package org.hyperion.cache.defs;
 
+import java.util.HashMap;
+
 import org.hyperion.cache.Cache;
 import org.hyperion.cache.stream.InputStream;
+import org.hyperion.plugin.impl.OptionHandler;
 import org.hyperion.rs2.model.Location;
 
 public final class ObjectDef {
@@ -47,6 +50,11 @@ public final class ObjectDef {
 
     public static boolean projectileCliped = true;
 	public int clipType = 2;
+	
+	/**
+	 * object plugin handlers
+	 */
+	private final HashMap<String,OptionHandler> HANDLERS = new HashMap<String,OptionHandler>();
     
     final void method332() {
     	if (hasActions == -1) {
@@ -340,6 +348,10 @@ public final class ObjectDef {
     	}
     	return sizeX;
     }
+
+	public HashMap<String,OptionHandler> getHandlers() {
+		return HANDLERS;
+	}
 
 
 }

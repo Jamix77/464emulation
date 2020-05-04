@@ -1,11 +1,18 @@
 package org.hyperion.rs2.packet;
 
+import org.hyperion.plugin.PluginManager;
+import org.hyperion.plugin.impl.OptionHandler;
+import org.hyperion.rs2.action.Action;
+import org.hyperion.rs2.action.Action.AnimationPolicy;
+import org.hyperion.rs2.action.Action.CancelPolicy;
+import org.hyperion.rs2.action.Action.StackPolicy;
 import org.hyperion.rs2.action.impl.CoordinateAction;
 import org.hyperion.rs2.action.impl.ProductionAction;
 import org.hyperion.rs2.model.GameObject;
 import org.hyperion.rs2.model.Item;
 import org.hyperion.rs2.model.Location;
 import org.hyperion.rs2.model.Player;
+import org.hyperion.rs2.model.Mob.InteractionMode;
 import org.hyperion.rs2.model.region.Region;
 import org.hyperion.rs2.net.Packet;
 
@@ -71,8 +78,38 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 		if (obj == null) {
 			return;
 		}
-		//player.addCoordinateAction(player.getWidth(), player.getHeight(),
-		//		location, 0, 0, 0, action);
+		player.face(obj.getLocation());
+		Action action = new Action(player, 0) {
+			@Override
+			public void execute() {
+				if(player.getCombatState().isDead()) {
+					this.stop();
+					return;
+				}
+				OptionHandler p = obj.getDefinition().getHandlers().get("option:" + obj.getDefinition().actions[0].toLowerCase());
+				if (p == null) {
+					p = (OptionHandler) PluginManager.getOptionHandlerPlugins().get("object:" + obj.getDefinition().actions[0].toLowerCase());
+				}
+				if (p != null) {
+					p.handle(player, obj, obj.getDefinition().actions[0].toLowerCase());
+				}
+				this.stop();
+			}
+			@Override
+			public AnimationPolicy getAnimationPolicy() {
+				return AnimationPolicy.RESET_ALL;
+			}
+			@Override
+			public CancelPolicy getCancelPolicy() {
+				return CancelPolicy.ALWAYS;
+			}
+			@Override
+			public StackPolicy getStackPolicy() {
+				return StackPolicy.NEVER;
+			}			
+		};
+		int distance = 1;
+		player.addCoordinateAction(player.getWidth(), player.getHeight(), obj.getLocation(), obj.getWidth(), obj.getHeight(), distance, action);
 	}
 
 	/**
@@ -95,8 +132,39 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 		if (obj == null) {
 			return;
 		}
-		player.face(player.getLocation().oppositeTileOfEntity(obj));
-
+player.face(obj.getLocation());
+		
+		Action action = new Action(player, 0) {
+			@Override
+			public void execute() {
+				if(player.getCombatState().isDead()) {
+					this.stop();
+					return;
+				}
+				OptionHandler p = obj.getDefinition().getHandlers().get("option:" + obj.getDefinition().actions[1].toLowerCase());
+				if (p == null) {
+					p = (OptionHandler) PluginManager.getOptionHandlerPlugins().get("object:" + obj.getDefinition().actions[1].toLowerCase());
+				}
+				if (p != null) {
+					p.handle(player, obj, obj.getDefinition().actions[1].toLowerCase());
+				}
+				this.stop();
+			}
+			@Override
+			public AnimationPolicy getAnimationPolicy() {
+				return AnimationPolicy.RESET_ALL;
+			}
+			@Override
+			public CancelPolicy getCancelPolicy() {
+				return CancelPolicy.ALWAYS;
+			}
+			@Override
+			public StackPolicy getStackPolicy() {
+				return StackPolicy.NEVER;
+			}			
+		};
+		int distance = 1;
+		player.addCoordinateAction(player.getWidth(), player.getHeight(), obj.getLocation(), obj.getWidth(), obj.getHeight(), distance, action);
 		player.getActionSender().sendDebugPacket(packet.getOpcode(), "ObjOpt2",
 				new Object[] { "ID: " + id, "Loc: " + loc });
 

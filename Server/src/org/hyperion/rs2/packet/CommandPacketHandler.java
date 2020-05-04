@@ -36,7 +36,7 @@ import org.hyperion.rs2.util.NameUtils;
 import org.hyperion.rs2.util.TextUtils;
 import org.hyperion.util.XMLController;
 
-import dialogues.HansDialogue;
+import plugin.dialogue.HansDialogue;
 
 
 /**

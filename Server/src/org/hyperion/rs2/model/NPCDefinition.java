@@ -6,9 +6,12 @@ import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel.MapMode;
+import java.util.HashMap;
 import java.util.logging.Logger;
 
 import org.apache.mina.core.buffer.IoBuffer;
+import org.hyperion.plugin.Plugin;
+import org.hyperion.plugin.impl.OptionHandler;
 import org.hyperion.rs2.util.IoBufferUtils;
 import org.hyperion.util.Buffers;
 
@@ -20,6 +23,11 @@ import org.hyperion.util.Buffers;
  *
  */
 public class NPCDefinition {
+	
+	/**
+	 * NPC plugin handlers
+	 */
+	private final HashMap<String,OptionHandler> HANDLERS = new HashMap<String,OptionHandler>();
 	
 	/**
 	 * Logger instance.
@@ -276,6 +284,10 @@ public class NPCDefinition {
 	 */
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public HashMap<String,OptionHandler> getHandlers() {
+		return HANDLERS;
 	}
 
 }

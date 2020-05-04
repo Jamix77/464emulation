@@ -1,5 +1,9 @@
 package org.hyperion.rs2.model;
 
+import java.util.HashMap;
+
+import org.hyperion.plugin.impl.OptionHandler;
+
 /**
  * Represents a single type of object.
  * @author Graham Edgecombe

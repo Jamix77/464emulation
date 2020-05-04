@@ -2,6 +2,7 @@ package org.hyperion.rs2.model.dialogue;
 
 import java.util.HashMap;
 
+import org.hyperion.plugin.Plugin;
 import org.hyperion.rs2.model.NPC;
 import org.hyperion.rs2.model.Player;
 import org.hyperion.rs2.model.dialogue.types.DialogueEnd;
@@ -13,7 +14,7 @@ import org.hyperion.rs2.model.dialogue.types.DialogueSkip;
  * @author jamix77
  *
  */
-public abstract class Dialogue {
+public abstract class Dialogue implements Plugin<Object> {
 	
 	/**
 	 * The player who currently owns this dialogue.
@@ -40,11 +41,7 @@ public abstract class Dialogue {
 	 */
 	public abstract void generate();
 	
-	/**
-	 * Get a new instance of this dialogue.
-	 * @return
-	 */
-	public abstract Dialogue newInstance(Player player);
+	public Dialogue() {this.player=null;}
 	
 	/**
 	 * Constructor.
