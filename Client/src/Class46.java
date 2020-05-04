@@ -1,0 +1,140 @@
+/* Class46 - Decompiled by JODE
+ * Visit http://jode.sourceforge.net/
+ */
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringReader;
+import java.io.StringWriter;
+
+public class Class46 {
+	public static byte[][][] landscapeData;
+	public static Class26 aClass26_928 = RS2Font.getRs2PreparedString("Weiter",
+			false);
+	public static Class26 aClass26_930 = RS2Font.getRs2PreparedString("au",
+			false);
+	public static Class26 aClass26_941;
+	public static Class26 aClass26_942;
+	public static Class26 aClass26_944;
+	public static RSInterface rsInterface;
+	public static int anInt927;
+	public static int anInt929;
+	public static int anInt931;
+	public static int anInt932;
+	public static int anInt933;
+	public static int anInt935;
+	public static int anInt936;
+	public static int anInt943;
+	public static int[] anIntArray934 = new int[256];
+	public static int[] anIntArray937;
+	public static int[] anIntArray939;
+	public static int[] anIntArray945;
+
+	static {
+		for (int i = 0; (i ^ 0xffffffff) > -257; i++) {
+			int i_6_ = i;
+			for (int i_7_ = 0; i_7_ < 8; i_7_++) {
+				if ((0x1 & i_6_) != 1)
+					i_6_ >>>= 1;
+				else
+					i_6_ = ~0x12477cdf ^ i_6_ >>> -1734191103;
+			}
+			anIntArray934[i] = i_6_;
+		}
+		landscapeData = new byte[4][104][104];
+		anInt936 = 0;
+		anIntArray939 = new int[5];
+		aClass26_944 = RS2Font.getRs2PreparedString("gleiten:", false);
+		anInt943 = -1;
+		anIntArray945 = new int[25];
+		aClass26_941 = RS2Font.getRs2PreparedString(" ", false);
+		aClass26_942 = aClass26_941;
+	}
+
+	public static void method973(boolean arg0, int arg1, int arg2) {
+		try {
+			if (Class4_Sub20_Sub8.anInt3021 != 0 && arg1 != -1) {
+				AppletListener.method1151(Class4_Sub20_Sub8.anInt3021, -2,
+						Class24.aClass19_Sub1_562, 0, arg1, false);
+				Class4_Sub20_Sub6.aBoolean2895 = true;
+			}
+			if (arg0 != false)
+				resetCache(-56);
+			anInt935++;
+		} catch (RuntimeException runtimeexception) {
+			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, ("md.B("
+					+ arg0 + ',' + arg1 + ',' + arg2 + ')'));
+		}
+	}
+
+	public static String method974(byte arg0, Throwable arg1)
+			throws IOException {
+		try {
+			anInt927++;
+			String string;
+			if (!(arg1 instanceof JagexException))
+				string = "";
+			else {
+				JagexException runtimeexception_sub1 = (JagexException) arg1;
+				arg1 = runtimeexception_sub1.throwable;
+				string = runtimeexception_sub1.errorMessage + " | ";
+			}
+			StringWriter stringwriter = new StringWriter();
+			if (arg0 != -24)
+				anInt936 = 111;
+			PrintWriter printwriter = new PrintWriter(stringwriter);
+			arg1.printStackTrace(printwriter);
+			printwriter.close();
+			String string_0_ = stringwriter.toString();
+			BufferedReader bufferedreader = new BufferedReader(
+					new StringReader(string_0_));
+			String string_1_ = bufferedreader.readLine();
+			for (;;) {
+				String string_2_ = bufferedreader.readLine();
+				if (string_2_ == null)
+					break;
+				int i = string_2_.indexOf('(');
+				int i_3_ = string_2_.indexOf(')', i - -1);
+				if (i >= 0 && i_3_ >= 0) {
+					String string_4_ = string_2_.substring(i - -1, i_3_);
+					int i_5_ = string_4_.indexOf(".java:");
+					if ((i_5_ ^ 0xffffffff) <= -1) {
+						string_4_ = (string_4_.substring(0, i_5_) + string_4_
+								.substring(5 + i_5_));
+						string += string_4_ + ' ';
+						continue;
+					}
+					string_2_ = string_2_.substring(0, i);
+				}
+				string_2_ = string_2_.trim();
+				string_2_ = string_2_.substring(1 + string_2_.lastIndexOf(' '));
+				string_2_ = string_2_.substring(string_2_.lastIndexOf('\t')
+						- -1);
+				string += string_2_ + ' ';
+			}
+			string += "| " + string_1_;
+			return string;
+		} catch (RuntimeException runtimeexception) {
+			throw runtimeexception;
+		}
+	}
+
+	public static void resetCache(int arg0) {
+		try {
+			anIntArray934 = null;
+			landscapeData = null;
+			anIntArray937 = null;
+			rsInterface = null;
+			aClass26_930 = null;
+			aClass26_928 = null;
+			aClass26_941 = null;
+			aClass26_942 = null;
+			anIntArray945 = null;
+			aClass26_944 = null;
+			anIntArray939 = null;
+		} catch (RuntimeException runtimeexception) {
+			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, "md.C("
+					+ arg0 + ')');
+		}
+	}
+}

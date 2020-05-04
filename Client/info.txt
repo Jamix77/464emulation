@@ -1,0 +1,13 @@
+Hello, this a copy of the RS2 #464 User Client that has been lightly refactored for development convience. If you need a command to run the client you may use the following...
+
+cd bin
+java Client 2 live live highmem members english game0
+
+keep in mind those args are subject to modification.
+
+If you must compile it, try the following...
+
+cd src
+javac * -bin ../bin/
+
+Thanks! Joshua Barry - http://www.rune-server.org/members/barry/

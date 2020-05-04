@@ -1,0 +1,349 @@
+<list>
+	<npcSpawn>
+		<npcId>496</npcId>
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3267</x>
+			<y>3169</y>
+			<z>0</z>
+		</spawnLocation>
+		<direction>4</direction>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>497</npcId>
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3267</x>
+			<y>3168</y>
+			<z>0</z>
+		</spawnLocation>
+		<direction>4</direction>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>496</npcId>
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3267</x>
+			<y>3167</y>
+			<z>0</z>
+		</spawnLocation>
+		<direction>4</direction>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>497</npcId>
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3267</x>
+			<y>3166</y>
+			<z>0</z>
+		</spawnLocation>
+		<direction>4</direction>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>496</npcId>
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3267</x>
+			<y>3164</y>
+			<z>0</z>
+		</spawnLocation>
+		<direction>4</direction>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>18</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3300</x>
+			<y>3173</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3299</x>
+			<y>3168</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3303</x>
+			<y>3177</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>18</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3300</x>
+			<y>3169</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3299</x>
+			<y>3168</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3303</x>
+			<y>3177</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>18</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3285</x>
+			<y>3169</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3283</x>
+			<y>3167</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3286</x>
+			<y>3177</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>18</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3285</x>
+			<y>3173</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3283</x>
+			<y>3167</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3286</x>
+			<y>3177</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>18</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3297</x>
+			<y>3177</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3287</x>
+			<y>3167</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3398</x>
+			<y>3177</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>18</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3288</x>
+			<y>3176</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3287</x>
+			<y>3167</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3398</x>
+			<y>3177</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>18</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3294</x>
+			<y>3170</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3287</x>
+			<y>3167</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3398</x>
+			<y>3177</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>18</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3288</x>
+			<y>3169</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3287</x>
+			<y>3167</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3398</x>
+			<y>3177</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>545</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3320</x>
+			<y>3193</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3318</x>
+			<y>3191</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3323</x>
+			<y>3196</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>2824</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3274</x>
+			<y>3191</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3270</x>
+			<y>3190</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3277</x>
+			<y>3194</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>541</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3288</x>
+			<y>3189</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3285</x>
+			<y>3188</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3289</x>
+			<y>3191</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>5507</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>2311</x>
+			<y>3781</y>
+			<z>0</z>
+		</spawnLocation>
+		<direction>1</direction>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>4905</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>2973</x>
+			<y>3374</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>2970</x>
+			<y>3370</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>2978</x>
+			<y>3378</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+	<npcSpawn>
+		<npcId>90</npcId>
+		<!--The npc id to spawn.-->
+		<spawnLocation>
+			<!--The location to spawn the NPC.-->
+			<x>3102</x>
+			<y>3561</y>
+			<z>0</z>
+		</spawnLocation>
+		<minLocation>
+			<!--The lowest location you can walk into.-->
+			<x>3097</x>
+			<y>3556</y>
+			<z>0</z>
+		</minLocation>
+		<maxLocation>
+			<!--The highest location you can walk into.-->
+			<x>3107</x>
+			<y>3565</y>
+			<z>0</z>
+		</maxLocation>
+	</npcSpawn>
+</list>
