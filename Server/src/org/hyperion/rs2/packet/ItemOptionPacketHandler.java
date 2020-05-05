@@ -2,6 +2,9 @@ package org.hyperion.rs2.packet;
 
 import java.util.logging.Logger;
 
+import org.hyperion.plugin.impl.ItemOnHandler;
+import org.hyperion.plugin.impl.ItemOnHandler.ItemOnEvent;
+import org.hyperion.plugin.impl.ItemOnHandler.ItemOnType;
 import org.hyperion.rs2.action.Action;
 import org.hyperion.rs2.action.impl.ConsumeItemAction;
 import org.hyperion.rs2.model.Cannon;
@@ -12,7 +15,6 @@ import org.hyperion.rs2.model.Location;
 import org.hyperion.rs2.model.Player;
 import org.hyperion.rs2.model.Shop;
 import org.hyperion.rs2.model.World;
-import org.hyperion.rs2.model.Consumables.Drink;
 import org.hyperion.rs2.model.container.Bank;
 import org.hyperion.rs2.model.container.Container;
 import org.hyperion.rs2.model.container.Equipment;
@@ -795,49 +797,9 @@ public class ItemOptionPacketHandler implements PacketHandler {
 				if (player.getCombatState().isDead())
 					return;
 
-				Drink drink1 = Drink.forId(usedItem.getId());
-				Drink drink2 = Drink.forId(withItem.getId());
-				if (drink1 != null && drink2 != null) {
-					if (drink1 != drink2) {
-						player.getActionSender().sendMessage(
-								"You can't combine these two potions.");
-						return;
-					}
-					int index1 = -1;
-					int index2 = -1;
-					for (int i = 0; i < drink1.getIds().length; i++) {
-						if (drink1.getId(i) == usedItem.getId()) {
-							index1 = i + 1;
-							break;
-						}
-					}
-					for (int i = 0; i < drink2.getIds().length; i++) {
-						if (drink2.getId(i) == withItem.getId()) {
-							index2 = i + 1;
-							break;
-						}
-					}
-					int doses = index1 + index2;
-					int amount = 0;
-					Item endPotion1 = null;
-					Item endPotion2 = null;
-					if (doses < 5) {
-						endPotion1 = new Item(drink1.getId(doses - 1), 1);
-						endPotion2 = new Item(229, 1);
-						amount = doses;
-					} else {
-						endPotion1 = new Item(drink1.getId(3), 1);
-						amount = 4;
-						doses -= 4;
-						endPotion2 = new Item(drink1.getId(doses - 1), 1);
-					}
-					player.getInventory().remove(usedItem);
-					player.getInventory().remove(withItem);
-					player.getInventory().add(endPotion1, usedWithSlot);
-					player.getInventory().add(endPotion2, slot);
-					player.getActionSender().sendMessage(
-							"You have combined the liquid into " + amount
-									+ " doses.");
+				ItemOnHandler h = ItemOnHandler.getHandlers().get(ItemOnType.ITEM_ON_ITEM.getPrefix() + ":" + usedItem.getId() + "-" + withItem.getId());
+				if (h != null) {
+					h.handle(new ItemOnEvent(usedItem,withItem,player));
 					return;
 				}
 				player.getActionSender().sendMessage(

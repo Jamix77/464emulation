@@ -15,38 +15,38 @@ import org.hyperion.rs2.model.dialogue.types.DialogueOptions.DialogueOptionHandl
 
 @InitializablePlugin
 @PluginManifest(authors = { "jamix77" }, version = 1.5, type = PluginType.DIALOGUE)
-public class HansDialogue extends Dialogue {
+public class TestDialogue extends Dialogue {
 
 	private static final NPC HANS = new NPC(NPCDefinition.forId(0), null, null, null, 0);
 	
-	public HansDialogue() {super(null);}
+	public TestDialogue() {super(null);}
 	
-	public HansDialogue(Player player) {
+	public TestDialogue(Player player) {
 		super(player);
 	}
 
 	@Override
 	public void generate() {
-		add(0,player("Suck my penis","You cunter","Fuckfuckfuck"))
-		.add(1, player("yeetyeetyet","ur nan is dumb"))
+		add(0,player("This is a test","Testingtestingtesting","Thankyouverymuch"))
+		.add(1, player("secondmenu","yeet"))
 		.add(2, skip(5))
-		.add(5, npc(HANS,"shid and fud"))
+		.add(5, npc(HANS,"we skipped to stage 5"))
 		.add(6, skip(20))
 		.add(20, new DialogueOptions(
 				
-				new DialogueOption("penis", new DialogueOptionHandler() {
+				new DialogueOption("option 1", new DialogueOptionHandler() {
 					@Override
 					public void run(Player p, Dialogue d) {
-						p.getActionSender().sendMessage("PENIS BUTTON CLICKED, HURRAY");
+						p.getActionSender().sendMessage("clicked option 1");
 						d.skipTo(30);
 						d.handle();
 					}
 				}),
 				
-				new DialogueOption("notpenis", new DialogueOptionHandler() {
+				new DialogueOption("option2", new DialogueOptionHandler() {
 					@Override
 					public void run(Player p, Dialogue d) {
-						p.getActionSender().sendMessage("NOTPENIS BUTTON CLICKED, HURRAY");
+						p.getActionSender().sendMessage("option2 pressed");
 						d.skipTo(30);
 						d.handle();
 					}
@@ -58,11 +58,11 @@ public class HansDialogue extends Dialogue {
 
 	@Override
 	public Plugin<Object> newInstance(Object arg) throws Throwable {
-		return new HansDialogue((Player)arg);
+		return new TestDialogue((Player)arg);
 	}
 
 	@Override
 	public void init() throws Throwable {
-		PluginManager.getDialoguePlugins().put(0,this);
+		PluginManager.getDialoguePlugins().put(HANS.getDefinition().getId(),this);
 	}
 }

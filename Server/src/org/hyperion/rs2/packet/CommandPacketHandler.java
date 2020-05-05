@@ -36,8 +36,6 @@ import org.hyperion.rs2.util.NameUtils;
 import org.hyperion.rs2.util.TextUtils;
 import org.hyperion.util.XMLController;
 
-import plugin.dialogue.HansDialogue;
-
 
 /**
  * Handles player commands (the ::words).
@@ -461,8 +459,6 @@ public class CommandPacketHandler implements PacketHandler {
 							System.exit(0);
 						}						
 					});
-				} else if(command.startsWith("penis")) {
-					player.getDialogueManager().start(new HansDialogue(player));
 				} else if(command.startsWith("spawn")) {
 					NPC npc = new NPC(NPCDefinition.forId(Integer.parseInt(args[1])), Location.create(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ()), player.getLocation(), player.getLocation(), 6);
 					World.getWorld().register(npc);

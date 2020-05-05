@@ -1,18 +1,15 @@
 package org.hyperion.rs2.packet;
 
 import org.hyperion.plugin.PluginManager;
+import org.hyperion.plugin.impl.ItemOnHandler;
+import org.hyperion.plugin.impl.ItemOnHandler.ItemOnEvent;
+import org.hyperion.plugin.impl.ItemOnHandler.ItemOnType;
 import org.hyperion.plugin.impl.OptionHandler;
 import org.hyperion.rs2.action.Action;
-import org.hyperion.rs2.action.Action.AnimationPolicy;
-import org.hyperion.rs2.action.Action.CancelPolicy;
-import org.hyperion.rs2.action.Action.StackPolicy;
-import org.hyperion.rs2.action.impl.CoordinateAction;
-import org.hyperion.rs2.action.impl.ProductionAction;
 import org.hyperion.rs2.model.GameObject;
 import org.hyperion.rs2.model.Item;
 import org.hyperion.rs2.model.Location;
 import org.hyperion.rs2.model.Player;
-import org.hyperion.rs2.model.Mob.InteractionMode;
 import org.hyperion.rs2.model.region.Region;
 import org.hyperion.rs2.net.Packet;
 
@@ -201,7 +198,11 @@ player.face(obj.getLocation());
 			return;
 		}
 		player.face(player.getLocation().oppositeTileOfEntity(obj));
-
+		ItemOnHandler h = ItemOnHandler.getHandlers().get(ItemOnType.ITEM_ON_OBJECT.getPrefix() + ":" + item.getId() + "-" + obj.getId());
+		if (h != null) {
+			h.handle(new ItemOnEvent(item,obj,player));
+			return;
+		}
 		player.getActionSender().sendDebugPacket(packet.getOpcode(),
 				"ItemOnObject", new Object[] { "ID: " + id, "Loc: " + loc });
 
