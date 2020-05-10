@@ -13,6 +13,7 @@ public class Animation {
 	/**
 	 * Different animation constants.
 	 */
+	public final static Animation DEFAULT = create(-1);
 	public final static Animation YES_EMOTE = create(855);
 	public final static Animation NO_EMOTE = create(856);
 	public final static Animation THINKING = create(857);

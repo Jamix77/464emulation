@@ -641,6 +641,7 @@ public class World {
 			public void execute() {
 				unregister(replacement, false);
 				register(original);
+				this.stop();
 			}			
 		});
 	}

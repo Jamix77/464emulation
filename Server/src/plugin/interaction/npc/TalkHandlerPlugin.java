@@ -27,7 +27,7 @@ public class TalkHandlerPlugin extends OptionHandler {
 
 	@Override
 	public void init() throws Throwable {
-		PluginManager.getOptionHandlerPlugins().put("npc:talk-to", this);
+		option("npc:talk-to");//adds the default case for the talk to options on npcs to this plugin using this.
 	}
 
 	@Override

@@ -184,7 +184,7 @@ public class ActionSender {
 		sendFriends();
 		sendIgnores();
 		sendSkills();
-		//sendMessage("Welcome to " + Constants.SERVER_NAME + ".");
+		sendMessage("Welcome to " + Constants.SERVER_NAME + ".");
 		//sendMessage("Latest Update: " + Constants.UPDATE + ".");
 		
 		
@@ -192,6 +192,7 @@ public class ActionSender {
 		sendInteractionOption("null", 2, false); // challenge = duel arena only
 		sendInteractionOption("Follow", 3, false);
 		sendInteractionOption("Trade with", 4, false);
+		sendInteractionOption("Pat", 5, false);
 		
 		updateRunningConfig();
 		sendRunEnergy();
@@ -1611,7 +1612,7 @@ public class ActionSender {
 		pb.put((byte) (mob instanceof Player ? 0 : 1));
 		pb.putShort(distance); //follow distance, set to 8 for range etc.
 		//player.write(pb.toPacket());
-		player.setInteractingEntity(InteractionMode.ATTACK, mob);
+		player.setInteractingEntity(InteractionMode.REQUEST, mob);
 		return this;
 	}
 
