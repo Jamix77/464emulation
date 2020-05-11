@@ -1,7 +1,10 @@
 package org.hyperion.cache.defs;
 
+import java.util.HashMap;
+
 import org.hyperion.cache.Cache;
 import org.hyperion.cache.stream.InputStream;
+import org.hyperion.plugin.impl.OptionHandler;
 
 public final class ItemDef {
 
@@ -45,6 +48,11 @@ public final class ItemDef {
 	public int maleWornModelId1;
 	public int lightness;
 	public int colourEquip1;
+	
+	/**
+	 * object plugin handlers
+	 */
+	private final HashMap<String,OptionHandler> HANDLERS = new HashMap<String,OptionHandler>();
 
 	public static final ItemDef forId(int itemId) {
 		if (itemId < 0 || itemId >= itemsDefinitions.length)
@@ -59,6 +67,13 @@ public final class ItemDef {
 		this.id = id;
 		setDefaultsVariableValues();
 		loadItemDefinitions();
+	}
+	
+	public static void init() {
+		for (int i = 0; i < 11791;i++) {
+			ItemDef.forId(i);
+		}
+		
 	}
 
 	public final void loadItemDefinitions() {
@@ -279,6 +294,10 @@ public final class ItemDef {
 				break;
 			readOpcodes(stream, opcode);
 		}
+	}
+
+	public HashMap<String,OptionHandler> getHandlers() {
+		return HANDLERS;
 	}
 
 }

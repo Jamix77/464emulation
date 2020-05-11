@@ -19,6 +19,7 @@ import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.future.IoFuture;
 import org.apache.mina.core.future.IoFutureListener;
 import org.hyperion.cache.Cache;
+import org.hyperion.cache.defs.ItemDef;
 import org.hyperion.plugin.PluginManager;
 import org.hyperion.rs2.Constants;
 import org.hyperion.rs2.GameEngine;
@@ -182,6 +183,13 @@ public class World {
 			@Override
 			public Object call() throws Exception {
 				ItemDefinition.init();
+				return null;
+			}
+		});
+		backgroundLoader.submit(new Callable<Object>() {
+			@Override
+			public Object call() throws Exception {
+				ItemDef.init();
 				return null;
 			}
 		});

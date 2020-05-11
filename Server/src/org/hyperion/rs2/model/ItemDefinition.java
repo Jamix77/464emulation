@@ -6,9 +6,11 @@ import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel.MapMode;
+import java.util.HashMap;
 import java.util.logging.Logger;
 
 import org.apache.mina.core.buffer.IoBuffer;
+import org.hyperion.plugin.impl.OptionHandler;
 import org.hyperion.rs2.util.IoBufferUtils;
 import org.hyperion.util.Buffers;
 
@@ -30,6 +32,11 @@ public class ItemDefinition {
 	 * The definition array.
 	 */
 	private static ItemDefinition[] definitions;
+	
+	/**
+	 * object plugin handlers
+	 */
+	private final HashMap<String,OptionHandler> HANDLERS = new HashMap<String,OptionHandler>();
 	
 	/**
 	 * Gets a definition for the specified id.
@@ -332,5 +339,9 @@ public class ItemDefinition {
 			if (d.name.equalsIgnoreCase(text))
 				return d.id;
 		return -1;
+	}
+
+	public HashMap<String,OptionHandler> getHandlers() {
+		return HANDLERS;
 	}
 }

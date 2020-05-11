@@ -32,7 +32,6 @@ public class DialogueManager {
 	 */
 	public void handle() {
 		if (currentDialogue == null) {
-			player.getActionSender().sendMessage("Dialogue is currently nulled!");
 			return;
 		}
 		currentDialogue.handle();

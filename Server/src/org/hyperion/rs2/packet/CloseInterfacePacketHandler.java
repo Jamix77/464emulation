@@ -76,6 +76,10 @@ public class CloseInterfacePacketHandler implements PacketHandler {
 			case 236:
 			case 237:
 			case 238:
+				if (player.getDialogueManager().getCurrentDialogue() == null) {
+					player.getActionSender().removeChatboxInterface();
+					break;
+				}
 				player.getDialogueManager().getCurrentDialogue().setButton(childId-1);
 				player.getDialogueManager().handle();
 				break;

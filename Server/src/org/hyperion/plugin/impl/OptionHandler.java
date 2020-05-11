@@ -8,6 +8,7 @@ import org.hyperion.cache.defs.ObjectDef;
 import org.hyperion.plugin.Plugin;
 import org.hyperion.plugin.PluginManager;
 import org.hyperion.rs2.model.Entity;
+import org.hyperion.rs2.model.ItemDefinition;
 import org.hyperion.rs2.model.Location;
 import org.hyperion.rs2.model.NPCDefinition;
 import org.hyperion.rs2.model.Player;
@@ -25,7 +26,7 @@ public abstract class OptionHandler implements Plugin<Object> {
 	 * @param option The option selected.
 	 * @return {@code True} if successful.
 	 */
-	public abstract boolean handle(Player player, Entity node, String option);
+	public abstract boolean handle(Player player, Object node, String option);
 
 	public void npc(int npcId,String option) {
 		NPCDefinition.forId(npcId).getHandlers().put("option:"+option, this);
@@ -35,9 +36,14 @@ public abstract class OptionHandler implements Plugin<Object> {
 		ObjectDef.forId(objId).getHandlers().put("option:"+option, this);
 	}
 	
+	public void item(int itemId, String option) {
+		ItemDefinition.forId(itemId).getHandlers().put("option:"+option, this);
+	}
+	
 	public void option(String option) {
 		PluginManager.getOptionHandlerPlugins().put(option, this);
 	}
+	
 
 	/**
 	 * Gets the custom destination for the node.

@@ -25,7 +25,6 @@ import org.hyperion.rs2.action.ActionQueue;
 import org.hyperion.rs2.action.impl.CoordinateAction;
 import org.hyperion.rs2.model.Hit.HitPriority;
 import org.hyperion.rs2.model.UpdateFlags.UpdateFlag;
-import org.hyperion.rs2.model.boundary.BoundaryManager;
 import org.hyperion.rs2.model.combat.CombatAction;
 import org.hyperion.rs2.model.combat.CombatFormulae;
 import org.hyperion.rs2.model.combat.CombatState;
@@ -1515,6 +1514,31 @@ public abstract class Mob extends Entity {
 		if (getActionSender() != null) {
 			getActionSender().playSound(sound);
 		}
+	}
+	
+	/**
+	 * Locks the mob for a certain amount of ticks.
+	 * @param ticks
+	 */
+	public void lock(int ticks) {
+		setAttribute("busy",true);
+		World.getWorld().submit(new Tickable(ticks) {
+
+			@Override
+			public void execute() {
+				removeAttribute("busy");
+				stop();
+			}
+			
+		});
+	}
+	
+	public void lock(int ticks, boolean cancel) {
+		if (cancel) {
+			this.getActionQueue().clearAllActions();
+			this.getWalkingQueue().reset();
+		}
+		lock(ticks);
 	}
 
 }

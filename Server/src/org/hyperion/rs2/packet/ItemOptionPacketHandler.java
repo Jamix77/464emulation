@@ -2,7 +2,10 @@ package org.hyperion.rs2.packet;
 
 import java.util.logging.Logger;
 
+import org.hyperion.cache.defs.ItemDef;
+import org.hyperion.plugin.PluginManager;
 import org.hyperion.plugin.impl.ItemOnHandler;
+import org.hyperion.plugin.impl.OptionHandler;
 import org.hyperion.plugin.impl.ItemOnHandler.ItemOnEvent;
 import org.hyperion.plugin.impl.ItemOnHandler.ItemOnType;
 import org.hyperion.rs2.action.Action;
@@ -655,6 +658,12 @@ public class ItemOptionPacketHandler implements PacketHandler {
 		if (player.getCombatState().isDead()) {
 			return;
 		}
+		if (item.getId() != id) {
+			return;
+		}
+		if (slot < 0 || slot > 27) {
+			return;
+		}
 		player.getActionQueue().clearRemovableActions();
 
 		player.getActionSender().sendDebugPacket(
@@ -671,26 +680,14 @@ public class ItemOptionPacketHandler implements PacketHandler {
 					return;
 				}
 
-				switch (item.getId()) {
-				case 6:
-					for (GameObject obj : player.getRegion().getGameObjects()) {
-						if (obj != null
-								&& obj.getType() == 10
-								&& obj.getLocation().equals(
-										player.getLocation())) {
-							player.getActionSender().sendMessage(
-									"You cannot set up a cannon here.");
-							return;
-						}
-					}
-					player.setAttribute("cannon",
-							new Cannon(player, player.getLocation()));
-					break;
-				default:
-					Action action = new ConsumeItemAction(player, item, slot);
-					action.execute();
-					break;
-				}
+			
+			OptionHandler p = item.getDefinition().getHandlers().get("option:" + ItemDef.forId(item.getId()).actions[0].toLowerCase());
+			if (p == null) {
+				p = (OptionHandler) PluginManager.getOptionHandlerPlugins().get("item:" +ItemDef.forId(item.getId()).actions[0].toLowerCase());
+			}
+			if (p != null) {
+				p.handle(player, item, ItemDef.forId(item.getId()).actions[0].toLowerCase());
+			}
 				break;
 			}
 		}

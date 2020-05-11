@@ -44,7 +44,7 @@ public class WoodcuttingPlugin extends OptionHandler {
 	/**
 	 * Handles the woodcutting
 	 */
-	public boolean handle(Player player, Entity node, String option) {
+	public boolean handle(Player player, Object node, String option) {
 		GameObject treeObj = ((GameObject)node);
 		Axe axe = Axe.getBestAxe(player);
 		Tree tree = Tree.forId(treeObj.getId());

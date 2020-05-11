@@ -30,6 +30,9 @@ public class NPCOptionPacketHandler implements PacketHandler {
 		if(player.getAttribute("cutScene") != null) {
 			return;
 		}
+		if(player.getAttribute("busy") != null) {
+			return;
+		}
 		if(player.getInterfaceAttribute("fightPitOrbs") != null) {
 			return;
 		}
