@@ -177,31 +177,31 @@ public class Class40 {
 									0,
 									(Class4_Sub15.aClass4_Sub20_Sub7_Sub1_Sub1_2302.anIntArray3248[0])));
 					if (bool) {
-						Class66.aClass4_Sub11_Sub1_1328
+						Class66.byteBuffer
 								.method227((byte) -27, i);
-						Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27,
+						Class66.byteBuffer.method227((byte) -27,
 								i_1_);
-						Class66.aClass4_Sub11_Sub1_1328.method207(
+						Class66.byteBuffer.putShort(
 								Class49.anInt999, 2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27,
+						Class66.byteBuffer.method227((byte) -27,
 								57);
-						Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27,
+						Class66.byteBuffer.method227((byte) -27,
 								Class31.anInt680);
-						Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27,
+						Class66.byteBuffer.method227((byte) -27,
 								Class4_Sub20_Sub5.anInt2889);
-						Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27,
+						Class66.byteBuffer.method227((byte) -27,
 								89);
-						Class66.aClass4_Sub11_Sub1_1328
-								.method207(
+						Class66.byteBuffer
+								.putShort(
 										(Class4_Sub15.aClass4_Sub20_Sub7_Sub1_Sub1_2302.anInt3270),
 										2018779304);
-						Class66.aClass4_Sub11_Sub1_1328
-								.method207(
+						Class66.byteBuffer
+								.putShort(
 										(Class4_Sub15.aClass4_Sub20_Sub7_Sub1_Sub1_2302.anInt3267),
 										2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27,
+						Class66.byteBuffer.method227((byte) -27,
 								Class4_Sub20_Sub3.anInt2816);
-						Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27,
+						Class66.byteBuffer.method227((byte) -27,
 								63);
 					}
 				}
@@ -234,11 +234,11 @@ public class Class40 {
 
 	public static void method936(byte arg0, int arg1, Class26 arg2) {
 		try {
-			Class66.aClass4_Sub11_Sub1_1328.method264(66, -83);
-			Class66.aClass4_Sub11_Sub1_1328.method210(arg1, 128);
+			Class66.byteBuffer.putOpcode(66, -83);
+			Class66.byteBuffer.putByteS(arg1, 128);
 			Class42.anInt851++;
 			anInt782++;
-			Class66.aClass4_Sub11_Sub1_1328.method256(1918583904,
+			Class66.byteBuffer.method256(1918583904,
 					arg2.method806((byte) -111));
 		} catch (RuntimeException runtimeexception) {
 			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, ("la.F("

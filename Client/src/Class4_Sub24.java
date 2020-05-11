@@ -78,29 +78,34 @@ public class Class4_Sub24 extends RSFont {
 		}
 	}
 
-	public static void method638(int arg0, long arg1) {
+	/**
+	 * Removes a player from the users ignore list.
+	 * @param arg0 - unknown.
+	 * @param name - the name of the player to remove (as long)
+	 */
+	public static void removeIgnorePacket(int arg0, long name) {
 		try {
 			anInt2441++;
 			if (arg0 != 2)
 				aClass26_2449 = null;
-			if (arg1 != 0L) {
+			if (name != 0L) {//checks the name isn't just nothing.
 				for (int i = 0; (Class26.anInt1827 ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
-					if ((Class9.aLongArray284[i] ^ 0xffffffffffffffffL) == (arg1 ^ 0xffffffffffffffffL)) {
+					if ((Class9.aLongArray284[i] ^ 0xffffffffffffffffL) == (name ^ 0xffffffffffffffffL)) {
 						Class4_Sub22.anInt2406++;
 						Class26.anInt1827--;
 						for (int i_10_ = i; ((i_10_ ^ 0xffffffff) > (Class26.anInt1827 ^ 0xffffffff)); i_10_++)
 							Class9.aLongArray284[i_10_] = Class9.aLongArray284[1 + i_10_];
 						Class4_Sub20_Sub1.anInt2718 = Class4_Sub20_Sub10.anInt3053;
-						Class66.aClass4_Sub11_Sub1_1328.method264(214, 122);
-						Class66.aClass4_Sub11_Sub1_1328.method255(
-								arg0 ^ 0xb4951d2, arg1);
+						Class66.byteBuffer.putOpcode(214, 122);
+						Class66.byteBuffer.putLong(
+								arg0 ^ 0xb4951d2, name);
 						break;
 					}
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, ("ud.C("
-					+ arg0 + ',' + arg1 + ')'));
+					+ arg0 + ',' + name + ')'));
 		}
 	}
 

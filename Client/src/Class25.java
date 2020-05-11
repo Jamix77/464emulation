@@ -247,7 +247,7 @@ public class Class25 {
 			Class16.anInt438 = 0;
 			Class4_Sub20_Sub8.anInt2956 = 0;
 			Class14.anInt404 = 0;
-			Class4_Sub11_Sub1.anInt2681 = 0;
+			ByteBuffer.anInt2681 = 0;
 			Class4_Sub20_Sub7_Sub1_Sub1.anInt3599 = 0;
 			Class13_Sub2.anInt2454 = 0;
 			StreamBuffer.anInt2091 = 0;
@@ -313,7 +313,7 @@ public class Class25 {
 			Class27.anInt628 = 0;
 			Class7.anInt220 = 0;
 			Class26.anInt1784 = 0;
-			Class4_Sub11_Sub1.anInt2668 = 0;
+			ByteBuffer.anInt2668 = 0;
 			Class4_Sub16.anInt2304 = 0;
 			Class4_Sub20_Sub6.anInt2927 = 0;
 			Class4_Sub15.anInt2303 = 0;
@@ -342,7 +342,7 @@ public class Class25 {
 			Class40.anInt785 = 0;
 			Class4_Sub2_Sub1.anInt2557 = 0;
 			RSApplet.anInt3 = 0;
-			Class4_Sub11_Sub1.anInt2674 = 0;
+			ByteBuffer.anInt2674 = 0;
 			Class4_Sub2_Sub1.anInt2551 = 0;
 			Class11.anInt325 = 0;
 			Region.anInt133 = 0;
@@ -463,7 +463,7 @@ public class Class25 {
 			RSApplet.anInt8 = 0;
 			RSApplet.anInt14 = 0;
 			Class57.anInt1153 = 0;
-			Class4_Sub11_Sub1.anInt2690 = 0;
+			ByteBuffer.anInt2690 = 0;
 			RSApplet.anInt7 = 0;
 			Class4_Sub7.anInt1945 = 0;
 			Class65.anInt1302 = 0;
@@ -559,9 +559,9 @@ public class Class25 {
 			Class53.anInt1082 = 0;
 			Class4_Sub20.anInt2362 = 0;
 			Class4_Sub2_Sub1.anInt2580 = 0;
-			Class4_Sub11_Sub1.anInt2670 = 0;
+			ByteBuffer.anInt2670 = 0;
 			Class68.anInt1382 = 0;
-			Class4_Sub11_Sub1.anInt2684 = 0;
+			ByteBuffer.anInt2684 = 0;
 			Class76.anInt1569 = 0;
 			Class31.anInt664 = 0;
 			Class4_Sub7.anInt1963 = 0;
@@ -604,7 +604,7 @@ public class Class25 {
 			Class4_Sub20_Sub7_Sub3.anInt3340 = 0;
 			StreamBuffer.anInt2090 = 0;
 			Region.anInt117 = 0;
-			Class4_Sub11_Sub1.anInt2680 = 0;
+			ByteBuffer.anInt2680 = 0;
 			Class64.anInt1256 = 0;
 			Class4_Sub2_Sub1.anInt2569 = 0;
 			Class71.anInt1473 = 0;
@@ -695,7 +695,7 @@ public class Class25 {
 			Class26.anInt1779 = 0;
 			Class19.anInt516 = 0;
 			Class19.anInt490 = 0;
-			Class4_Sub11_Sub1.anInt2666 = 0;
+			ByteBuffer.anInt2666 = 0;
 			Class4_Sub20_Sub7_Sub5.anInt3401 = 0;
 			Class33.anInt707 = 0;
 			Class13.anInt374 = 0;
@@ -748,7 +748,7 @@ public class Class25 {
 			Class4_Sub20_Sub11.anInt3084 = 0;
 			AppletListener.anInt1453 = 0;
 			Class12.anInt358 = 0;
-			Class4_Sub11_Sub1.anInt2687 = 0;
+			ByteBuffer.anInt2687 = 0;
 			Class4_Sub20_Sub3.anInt2842 = 0;
 			Class4_Sub20_Sub17.anInt3193 = 0;
 			Class43.anInt892 = 0;
@@ -850,7 +850,7 @@ public class Class25 {
 				Class24.anInt553 = 0;
 				RS2Font.anInt2788 = 0;
 				Class4_Sub20_Sub7_Sub4.anInt3365 = 0;
-				Class4_Sub11_Sub1.anInt2686 = 0;
+				ByteBuffer.anInt2686 = 0;
 				Class4_Sub20_Sub7_Sub1.anInt3280 = 0;
 				Class12.anInt356 = 0;
 				Class5.anInt191 = 0;
@@ -875,7 +875,7 @@ public class Class25 {
 				Class1.anInt75 = 0;
 				Class52.anInt1050 = 0;
 				Class4_Sub3.anInt1880 = 0;
-				Class4_Sub11_Sub1.anInt2667 = 0;
+				ByteBuffer.anInt2667 = 0;
 				Class8.anInt241 = 0;
 				AppletListener.anInt1451 = 0;
 				Class40.anInt784 = 0;
@@ -925,7 +925,7 @@ public class Class25 {
 				Class49.anInt996 = 0;
 				SceneGraph.anInt2484 = 0;
 				Class4_Sub24.anInt2445 = 0;
-				Class4_Sub11_Sub1.anInt2689 = 0;
+				ByteBuffer.anInt2689 = 0;
 				Class57.anInt1122 = 0;
 				Class4_Sub20_Sub17.anInt3207 = 0;
 				Class5.anInt186 = 0;
@@ -936,7 +936,7 @@ public class Class25 {
 				Class32.anInt694 = 0;
 				Class76.anInt1572 = 0;
 				Class4_Sub22.anInt2385 = 0;
-				Class4_Sub11_Sub1.anInt2672 = 0;
+				ByteBuffer.anInt2672 = 0;
 				AppletListener.anInt1460 = 0;
 				Class4_Sub20_Sub15.anInt3156 = 0;
 				Class4_Sub12.anInt2126 = 0;
@@ -1097,7 +1097,7 @@ public class Class25 {
 				Class34.anInt1740 = 0;
 				Class72.anInt1483 = 0;
 				StreamBuffer.anInt2072 = 0;
-				Class4_Sub11_Sub1.anInt2675 = 0;
+				ByteBuffer.anInt2675 = 0;
 				Class4_Sub20_Sub13.anInt3118 = 0;
 				StreamBuffer.anInt2055 = 0;
 				Class81.anInt1671 = 0;
@@ -1123,7 +1123,7 @@ public class Class25 {
 				Class59.aBoolean1188 = true;
 				Class59.anInt1184 = 0;
 				Class82.method1213((byte) -117);
-				Class66.aClass4_Sub11_Sub1_1328.pointion = 0;
+				Class66.byteBuffer.pointion = 0;
 				Class57.anInt1130 = 0;
 				Class4_Sub20_Sub8.anInt2980 = 0;
 				Class4_Sub20_Sub5.aClass4_Sub11_Sub1_2883.pointion = 0;

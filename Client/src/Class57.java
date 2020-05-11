@@ -124,7 +124,7 @@ public class Class57 {
 			Class4_Sub20_Sub9.anInt3051 = 0;
 			Class1.anInt74 = 0;
 			Class41.anInt822 = -1;
-			Class66.aClass4_Sub11_Sub1_1328.pointion = 0;
+			Class66.byteBuffer.pointion = 0;
 			if (arg0 > -86)
 				aClass26_1154 = null;
 			RSCanvas.anInt56 = -1;
@@ -173,7 +173,7 @@ public class Class57 {
 				}
 			}
 			for (int i = 0; (RSApplet.anInt12 ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
-				int i_10_ = Class4_Sub11_Sub1.anIntArray2695[i];
+				int i_10_ = ByteBuffer.anIntArray2695[i];
 				Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2 = aClass4_Sub20_Sub7_Sub1_Sub2Array1151[i_10_];
 				if (class4_sub20_sub7_sub1_sub2 != null
 						&& ((class4_sub20_sub7_sub1_sub2.anInt3253 ^ 0xffffffff) < -1)) {

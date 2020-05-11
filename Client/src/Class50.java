@@ -142,19 +142,19 @@ public class Class50 implements Runnable {
 									(Class4_Sub20_Sub16.aClass4_Sub13_3179),
 									true) != null) {
 						Class46.anInt929++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(233, -105);
-						Class66.aClass4_Sub11_Sub1_1328.method207(
+						Class66.byteBuffer.putOpcode(233, -105);
+						Class66.byteBuffer.putShort(
 								Class4_Sub15.aClass4_Sub13_2301.anInt2163,
 								2018779304);
-						Class66.aClass4_Sub11_Sub1_1328
-								.method218(
+						Class66.byteBuffer
+								.putShortA(
 										94,
 										Class4_Sub20_Sub16.aClass4_Sub13_3179.anInt2163);
-						Class66.aClass4_Sub11_Sub1_1328
+						Class66.byteBuffer
 								.method244(
 										89,
 										Class4_Sub20_Sub16.aClass4_Sub13_3179.anInt2172);
-						Class66.aClass4_Sub11_Sub1_1328.method211(
+						Class66.byteBuffer.method211(
 								Class4_Sub15.aClass4_Sub13_2301.anInt2172,
 								-1387540232);
 					}

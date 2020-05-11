@@ -111,7 +111,7 @@ public class Class4_Sub20_Sub8 extends Class4_Sub20 {
 		do {
 			try {
 				Class16.aClass19_429 = arg2;
-				Class4_Sub11_Sub1.aClass19_2691 = arg1;
+				ByteBuffer.aClass19_2691 = arg1;
 				anInt3018++;
 				if (arg0 == true)
 					break;

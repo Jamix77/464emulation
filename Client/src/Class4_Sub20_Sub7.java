@@ -57,14 +57,14 @@ public abstract class Class4_Sub20_Sub7 extends Class4_Sub20 {
 			Class81.aClass26_1705 = Class61.aClass26_1212;
 			Class52.aClass26_1055 = Class4_Sub21.aClass26_2366;
 			RSFont.aClass26_153 = Class4_Sub20_Sub5.aClass26_2890;
-			Class4_Sub20_Sub7_Sub1_Sub2.aClass26_3623 = Class4_Sub11_Sub1.aClass26_2678;
+			Class4_Sub20_Sub7_Sub1_Sub2.aClass26_3623 = ByteBuffer.aClass26_2678;
 			Class27.aClass26_629 = Class4_Sub17.aClass26_2322;
 			Class4_Sub20_Sub6.aClass26_2899 = RSFont.aClass26_147;
 			Class81.aClass26_1668 = Class4_Sub2_Sub4.aClass26_2653;
 			Class19_Sub1.aClass26_2514 = Class4_Sub20_Sub14.aClass26_3137;
 			Class65.aClass26_1308 = Class8.aClass26_243;
 			Class73.aClass26_1501 = Class4_Sub20.aClass26_2352;
-			Class52.aClass26_1051 = Class4_Sub11_Sub1.aClass26_2694;
+			Class52.aClass26_1051 = ByteBuffer.aClass26_2694;
 			Class81.aClass26_1707 = Class78.aClass26_1608;
 			Class68.aClass26_1368 = Class4_Sub20_Sub14.aClass26_3145;
 			Class81.aClass26_1691 = Class61.aClass26_1212;
@@ -88,7 +88,7 @@ public abstract class Class4_Sub20_Sub7 extends Class4_Sub20 {
 			Class76.aClass26_1561 = Class4_Sub8.aClass26_1966;
 			Class14.aClass26_400 = Class80.aClass26_1634;
 			Class4_Sub20_Sub7_Sub1_Sub2.aClass26_3626 = Class4_Sub6.aClass26_1928;
-			Class4_Sub11_Sub1.aClass26_2669 = Class4_Sub20_Sub9.aClass26_3043;
+			ByteBuffer.aClass26_2669 = Class4_Sub20_Sub9.aClass26_3043;
 			RS2Font.aClass26_2762 = Class14.aClass26_390;
 			Class10.aClass26_311 = RS2Font.aClass26_2759;
 			Class4_Sub20_Sub10.aClass26_3069 = RSApplet.aClass26_2;
@@ -131,7 +131,7 @@ public abstract class Class4_Sub20_Sub7 extends Class4_Sub20 {
 			Class53.aClass26_1077 = Class38.aClass26_769;
 			Class30.aClass26_662 = Class4_Sub20_Sub6.aClass26_2896;
 			AppletListener.aClass26_1463 = Class4_Sub20_Sub3.aClass26_2830;
-			Class4_Sub20_Sub11.aClass26_3096 = Class4_Sub11_Sub1.aClass26_2692;
+			Class4_Sub20_Sub11.aClass26_3096 = ByteBuffer.aClass26_2692;
 			Class16.aClass26_432 = Client.aClass26_1847;
 			Class81.aClass26_1676 = Class61.aClass26_1212;
 			Class41.aClass26_839 = Class32.aClass26_695;
@@ -206,7 +206,7 @@ public abstract class Class4_Sub20_Sub7 extends Class4_Sub20 {
 				Client.aClass26_1850 = Class4_Sub14.aClass26_2274;
 				Class14.aClass26_411 = Class50.aClass26_1018;
 				RSFont.aClass26_138 = Class4_Sub6.aClass26_1943;
-				Class41.aClass26_797 = Class4_Sub11_Sub1.aClass26_2679;
+				Class41.aClass26_797 = ByteBuffer.aClass26_2679;
 				Class53.aClass26_1078 = Class13.aClass26_373;
 				Class81.aClass26_1683 = Class61.aClass26_1212;
 				Class4_Sub16.aClass26_2312 = Class18.aClass26_464;

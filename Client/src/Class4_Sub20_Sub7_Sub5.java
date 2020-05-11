@@ -211,26 +211,26 @@ public class Class4_Sub20_Sub7_Sub5 extends Class4_Sub20_Sub7 {
 								0,
 								(Class4_Sub15.aClass4_Sub20_Sub7_Sub1_Sub1_2302.anIntArray3248[0]));
 				bool = true;
-				if ((arg2 ^ 0xffffffff) == -2) {
-					Class66.aClass4_Sub11_Sub1_1328.method264(84, 118);
+				if ((arg2 ^ 0xffffffff) == -2) {//attack option on the player.
+					Class66.byteBuffer.putOpcode(84, 118);
 					Class4_Sub10.anInt2038++;
-					Class66.aClass4_Sub11_Sub1_1328.method207(
+					Class66.byteBuffer.putShort(
 							(Class4_Sub23.anIntArray2432[i_19_]), 2018779304);
-				} else if ((arg2 ^ 0xffffffff) == -5) {
+				} else if ((arg2 ^ 0xffffffff) == -5) {//4th option on the player
 					Class67.anInt1339++;
-					Class66.aClass4_Sub11_Sub1_1328.method264(183, 121);
-					Class66.aClass4_Sub11_Sub1_1328.method251(
+					Class66.byteBuffer.putOpcode(183, 121);
+					Class66.byteBuffer.putLEShortA(
 							(Class4_Sub23.anIntArray2432[i_19_]), (byte) 53);
 				} else if ((arg2 ^ 0xffffffff) != -7) {
 					if (arg2 == 7) {
 						RSFont.anInt141++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(117, -26);
-						Class66.aClass4_Sub11_Sub1_1328.method218(81,
+						Class66.byteBuffer.putOpcode(117, -26);
+						Class66.byteBuffer.putShortA(81,
 								Class4_Sub23.anIntArray2432[i_19_]);
 					}
 				} else {
-					Class66.aClass4_Sub11_Sub1_1328.method264(114, 122);
-					Class66.aClass4_Sub11_Sub1_1328.method207(
+					Class66.byteBuffer.putOpcode(114, 122);
+					Class66.byteBuffer.putShort(
 							(Class4_Sub23.anIntArray2432[i_19_]), 2018779304);
 					Class4_Sub20_Sub15.anInt3156++;
 				}

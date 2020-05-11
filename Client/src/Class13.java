@@ -81,7 +81,7 @@ public abstract class Class13 {
 					}
 				}
 				for (int i_9_ = 0; RSApplet.anInt12 > i_9_; i_9_++) {
-					Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2 = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[Class4_Sub11_Sub1.anIntArray2695[i_9_]]);
+					Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2 = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[ByteBuffer.anIntArray2695[i_9_]]);
 					if (class4_sub20_sub7_sub1_sub2 != null
 							&& class4_sub20_sub7_sub1_sub2.method384(-19456)) {
 						Class4_Sub20_Sub3 class4_sub20_sub3 = (class4_sub20_sub7_sub1_sub2.aClass4_Sub20_Sub3_3617);

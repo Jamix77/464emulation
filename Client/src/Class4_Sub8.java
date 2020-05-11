@@ -37,9 +37,9 @@ public class Class4_Sub8 extends RSFont {
 					&& (arg1 ^ 0xffffffff) <= -1
 					&& Class13_Sub2.aClass4_Sub8Array2482.length > arg1
 					&& Class13_Sub2.aClass4_Sub8Array2482[arg1] != null) {
-				Class66.aClass4_Sub11_Sub1_1328.method264(161, -30);
+				Class66.byteBuffer.putOpcode(161, -30);
 				Class9.anInt276++;
-				Class66.aClass4_Sub11_Sub1_1328.method255(189354448,
+				Class66.byteBuffer.putLong(189354448,
 						Class13_Sub2.aClass4_Sub8Array2482[arg1].aLong150);
 			}
 		} catch (RuntimeException runtimeexception) {

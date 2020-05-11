@@ -379,7 +379,7 @@ public class Class71 {
 					.method1083(arg1, true));
 			if (class4_sub20_sub3 != null)
 				return class4_sub20_sub3;
-			byte[] is = Class4_Sub11_Sub1.aClass19_2691.method746(9, (byte) 92,
+			byte[] is = ByteBuffer.aClass19_2691.method746(9, (byte) 92,
 					arg1);
 			class4_sub20_sub3 = new Class4_Sub20_Sub3();
 			class4_sub20_sub3.anInt2820 = arg1;

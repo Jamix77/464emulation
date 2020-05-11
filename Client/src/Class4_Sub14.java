@@ -243,7 +243,7 @@ public class Class4_Sub14 extends RSFont {
 							Class4_Sub24.aClass19_Sub1_2451);
 					Client.method26((byte) 45, Class4_Sub1.aClass19_Sub1_1863);
 					Class34.method894(Class4_Sub1.aClass19_Sub1_1863, 73);
-					Class4_Sub11_Sub1.method267(77, Client.aClass19_Sub1_1849,
+					ByteBuffer.method267(77, Client.aClass19_Sub1_1849,
 							Class4_Sub20_Sub6.aClass19_Sub1_2921,
 							Class4_Sub17.aClass19_Sub1_2321,
 							Class4_Sub24.aClass19_Sub1_2451);

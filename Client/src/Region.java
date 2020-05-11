@@ -76,7 +76,7 @@ public class Region {
 					Class77.anInt1591 = 0;
 					Class4_Sub23.anInt2415 = 0;
 					Class4_Sub20.anInt2353 = 0;
-					Class4_Sub11_Sub1.anInt2677 = 1;
+					ByteBuffer.anInt2677 = 1;
 					Class48.anInt976 = 1;
 				}
 				if ((arg0 ^ 0xffffffff) == -6 || arg0 == 10

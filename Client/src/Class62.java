@@ -127,7 +127,7 @@ public class Class62 {
 			Class47.method976((byte) 86);
 			Class38.method921(-19752);
 			Class4_Sub20_Sub6.method370(-113);
-			Class4_Sub11_Sub1.method268(28317);
+			ByteBuffer.method268(28317);
 			Class50.method995(114);
 			Class4_Sub20_Sub7_Sub5.method428(1);
 			Class4_Sub16.method302(25947);

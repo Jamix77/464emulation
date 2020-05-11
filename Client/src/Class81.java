@@ -255,16 +255,16 @@ public class Class81 {
 				do {
 					if (!Region.aBoolean129
 							&& Class4_Sub20_Sub17.aClass76_3189 != null) {
-						Class66.aClass4_Sub11_Sub1_1328.method264(202, -10);
-						Class4_Sub11_Sub1.anInt2686++;
+						Class66.byteBuffer.putOpcode(202, -10);
+						ByteBuffer.anInt2686++;
 						try {
 							Class4_Sub20_Sub17.aClass76_3189
 									.method1183(
-											Class66.aClass4_Sub11_Sub1_1328.pointion,
+											Class66.byteBuffer.pointion,
 											0,
 											125,
-											(Class66.aClass4_Sub11_Sub1_1328.byteBuffer));
-							Class66.aClass4_Sub11_Sub1_1328.pointion = 0;
+											(Class66.byteBuffer.byteBuffer));
+							Class66.byteBuffer.pointion = 0;
 						} catch (java.io.IOException ioexception) {
 							Region.aBoolean129 = true;
 							break;

@@ -110,8 +110,8 @@ public class Class48 {
 						Class9.aLongArray284[Class26.anInt1827++] = arg0;
 						Class64.anInt1278++;
 						Class4_Sub20_Sub1.anInt2718 = Class4_Sub20_Sub10.anInt3053;
-						Class66.aClass4_Sub11_Sub1_1328.method264(102, -20);
-						Class66.aClass4_Sub11_Sub1_1328.method255(189354448,
+						Class66.byteBuffer.putOpcode(102, -20);
+						Class66.byteBuffer.putLong(189354448,
 								arg0);
 					}
 				}

@@ -144,7 +144,7 @@ public class RS2Font extends Class4_Sub20 {
 					bool = true;
 				}
 				Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2 = Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[i];
-				Class4_Sub11_Sub1.anIntArray2695[RSApplet.anInt12++] = i;
+				ByteBuffer.anIntArray2695[RSApplet.anInt12++] = i;
 				class4_sub20_sub7_sub1_sub2.anInt3256 = Region.anInt134;
 				int i_4_ = Class4_Sub20_Sub5.aClass4_Sub11_Sub1_2883.method266(
 						-1432215741, 5);

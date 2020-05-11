@@ -16,7 +16,7 @@ public class Class4_Sub20_Sub5 extends Class4_Sub20 {
 	public static Class26 aClass26_2891;
 	public static Class26 aClass26_2894;
 	public static Class26[] aClass26Array2893;
-	public static Class4_Sub11_Sub1 aClass4_Sub11_Sub1_2883;
+	public static ByteBuffer aClass4_Sub11_Sub1_2883;
 	public static RSInterface aClass4_Sub13_2882;
 	public static Class81 aClass81_2880;
 	public static int anInt2867;
@@ -31,7 +31,7 @@ public class Class4_Sub20_Sub5 extends Class4_Sub20 {
 		aClass26_2884 = aClass26_2871;
 		aClass26_2885 = (RS2Font.getRs2PreparedString(
 				"Ung-Ultige Verbindung mit einem Anmelde)2Server)3", false));
-		aClass4_Sub11_Sub1_2883 = new Class4_Sub11_Sub1(5000);
+		aClass4_Sub11_Sub1_2883 = new ByteBuffer(5000);
 		aClass26_2886 = RS2Font.getRs2PreparedString("::fpson", false);
 		anInt2889 = 0;
 		aClass26_2891 = RS2Font.getRs2PreparedString(" )2> <col=00ffff>", false);

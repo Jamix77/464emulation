@@ -44,8 +44,8 @@ public class Class37 {
 			anInt763++;
 			if (arg0 != -7398)
 				aClass26_764 = null;
-			Class66.aClass4_Sub11_Sub1_1328.method264(218, -77);
-			Class66.aClass4_Sub11_Sub1_1328.method255(189354448, 0L);
+			Class66.byteBuffer.putOpcode(218, -77);
+			Class66.byteBuffer.putLong(189354448, 0L);
 			Class43.anInt859++;
 		} catch (RuntimeException runtimeexception) {
 			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, "kb.A("

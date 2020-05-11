@@ -255,8 +255,8 @@ public class Class41 {
 					Class6.method646(-21691);
 					Class10.aClass66_299.method1084(0);
 					if (Class26.aFrame1786 != null) {
-						Class66.aClass4_Sub11_Sub1_1328.method264(174, 120);
-						Class66.aClass4_Sub11_Sub1_1328.method236(181,
+						Class66.byteBuffer.putOpcode(174, 120);
+						Class66.byteBuffer.putInt(181,
 								1057001181);
 						Class4_Sub20_Sub13.anInt3119++;
 					}
@@ -308,7 +308,7 @@ public class Class41 {
 					Region.method50(30, 1);
 					method938((byte) 0);
 					Class13.method681(4);
-					Class66.aClass4_Sub11_Sub1_1328.method264(203, 109);
+					Class66.byteBuffer.putOpcode(203, 109);
 					Region.method51(-1);
 				}
 			}

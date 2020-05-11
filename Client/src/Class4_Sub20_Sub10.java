@@ -43,8 +43,8 @@ public class Class4_Sub20_Sub10 extends Class4_Sub20 {
 			try {
 				anInt3068++;
 				if (arg1 != 0L) {
-					Class66.aClass4_Sub11_Sub1_1328.method264(218, 125);
-					Class66.aClass4_Sub11_Sub1_1328.method255(189354448, arg1);
+					Class66.byteBuffer.putOpcode(218, 125);
+					Class66.byteBuffer.putLong(189354448, arg1);
 					Class43.anInt859++;
 					if (arg0 == true)
 						break;

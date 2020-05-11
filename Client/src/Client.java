@@ -275,9 +275,9 @@ public class Client extends RSApplet {
 						119, Class33.aClass4_Sub20_Sub12_Sub4_Sub1_717);
 			else if ((Class54.anInt1109 ^ 0xffffffff) == -26) {
 				if ((Class4_Sub20.anInt2353 ^ 0xffffffff) == -2) {
-					if (Class4_Sub23.anInt2415 > Class4_Sub11_Sub1.anInt2677)
-						Class4_Sub11_Sub1.anInt2677 = Class4_Sub23.anInt2415;
-					int i_0_ = ((-Class4_Sub23.anInt2415 + Class4_Sub11_Sub1.anInt2677) * 50 / Class4_Sub11_Sub1.anInt2677);
+					if (Class4_Sub23.anInt2415 > ByteBuffer.anInt2677)
+						ByteBuffer.anInt2677 = Class4_Sub23.anInt2415;
+					int i_0_ = ((-Class4_Sub23.anInt2415 + ByteBuffer.anInt2677) * 50 / ByteBuffer.anInt2677);
 					Class19.method735(
 							false,
 							(Class4_Sub24.method639(
@@ -371,7 +371,7 @@ public class Client extends RSApplet {
 			Class27.method850(77);
 			Class10.method667(0);
 			Class4_Sub20_Sub7_Sub1_Sub2.method395(2);
-			Class4_Sub11_Sub1.method269(1);
+			ByteBuffer.method269(1);
 			Class69.method1106();
 			Region.method66(false);
 			RSInterface.method291(123);
@@ -573,7 +573,7 @@ public class Client extends RSApplet {
 			if (Class4_Sub20_Sub6.aClass43_2932 != null)
 				Class4_Sub20_Sub6.aClass43_2932.method958(101);
 			Class4_Sub14.method297((byte) 8);
-			Class4_Sub11_Sub1.method272(-1432215741);
+			ByteBuffer.method272(-1432215741);
 			do {
 				try {
 					if (Class4_Sub20_Sub13.aClass27_3127 != null)
@@ -683,7 +683,7 @@ public class Client extends RSApplet {
 									Class43.aClass75_872);
 							StreamBuffer class4_sub11 = new StreamBuffer(5);
 							class4_sub11.method227((byte) -27, 15);
-							class4_sub11.method236(181, 464);
+							class4_sub11.putInt(181, 464);
 							Class1.aClass76_61.method1183(5, 0, 121,
 									(class4_sub11.byteBuffer));
 							Class4_Sub20_Sub13.anInt3132++;

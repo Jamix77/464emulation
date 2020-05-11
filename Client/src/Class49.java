@@ -1289,7 +1289,7 @@ public class Class49 implements Runnable {
 							.method213((byte) -93);
 					if (i_131_ == 65535)
 						i_131_ = -1;
-					Class4_Sub11_Sub1.method275((byte) 106, i_131_);
+					ByteBuffer.method275((byte) 106, i_131_);
 					Class4_Sub20_Sub11.anInt3092 = -1;
 					return true;
 				}

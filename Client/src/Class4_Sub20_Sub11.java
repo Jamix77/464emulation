@@ -70,63 +70,63 @@ public class Class4_Sub20_Sub11 extends Class4_Sub20 {
 							Class54.method1011(class4_sub13, -22389))) {
 				if (arg2 == 1) {
 					Class76.anInt1559++;
-					Class66.aClass4_Sub11_Sub1_1328.method264(113, -126);
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putOpcode(113, -126);
+					Class66.byteBuffer.putInt(181, arg3);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 				}
 				if ((arg2 ^ 0xffffffff) == -3) {
 					Class4_Sub15.anInt2293++;
-					Class66.aClass4_Sub11_Sub1_1328.method264(37, -53);
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putOpcode(37, -53);
+					Class66.byteBuffer.putInt(181, arg3);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 				}
 				if (arg2 == 3) {
-					Class66.aClass4_Sub11_Sub1_1328.method264(134, -18);
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putOpcode(134, -18);
+					Class66.byteBuffer.putInt(181, arg3);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 					Class4_Sub24.anInt2440++;
 				}
 				if (arg2 == 4) {
-					Class66.aClass4_Sub11_Sub1_1328.method264(137, 111);
+					Class66.byteBuffer.putOpcode(137, 111);
 					Class33.anInt705++;
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putInt(181, arg3);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 				}
 				if ((arg2 ^ 0xffffffff) == -6) {
 					Class35.anInt727++;
-					Class66.aClass4_Sub11_Sub1_1328.method264(140, -12);
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putOpcode(140, -12);
+					Class66.byteBuffer.putInt(181, arg3);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 				}
 				if (arg2 == 6) {
-					Class66.aClass4_Sub11_Sub1_1328.method264(210, -91);
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
+					Class66.byteBuffer.putOpcode(210, -91);
+					Class66.byteBuffer.putInt(181, arg3);
 					Class4_Sub21.anInt2369++;
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 				}
 				if (arg2 == 7) {
-					Class66.aClass4_Sub11_Sub1_1328.method264(148, -82);
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putOpcode(148, -82);
+					Class66.byteBuffer.putInt(181, arg3);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 					Class4_Sub24.anInt2437++;
 				}
 				if (arg2 == 8) {
-					Class66.aClass4_Sub11_Sub1_1328.method264(104, -100);
+					Class66.byteBuffer.putOpcode(104, -100);
 					Class4_Sub20_Sub7_Sub5.anInt3401++;
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putInt(181, arg3);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 				}
 				if ((arg2 ^ 0xffffffff) == -10) {
 					anInt3073++;
-					Class66.aClass4_Sub11_Sub1_1328.method264(9, -61);
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putOpcode(9, -61);
+					Class66.byteBuffer.putInt(181, arg3);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 				}
 				if (arg2 == 10) {
 					Class46.anInt933++;
-					Class66.aClass4_Sub11_Sub1_1328.method264(28, 110);
-					Class66.aClass4_Sub11_Sub1_1328.method236(181, arg3);
-					Class66.aClass4_Sub11_Sub1_1328.method207(arg4, 2018779304);
+					Class66.byteBuffer.putOpcode(28, 110);
+					Class66.byteBuffer.putInt(181, arg3);
+					Class66.byteBuffer.putShort(arg4, 2018779304);
 				}
 			}
 		}

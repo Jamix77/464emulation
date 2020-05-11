@@ -116,11 +116,11 @@ public class Class13_Sub2 extends Class13 implements ImageProducer,
 				long l = (Class25.aLong584 = Class34.aClass26_1768
 						.method806((byte) -30));
 				int i = (int) (l >> 321638480 & 0x1fL);
-				Class66.aClass4_Sub11_Sub1_1328.pointion = 0;
-				Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27, 14);
-				Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27, i);
+				Class66.byteBuffer.pointion = 0;
+				Class66.byteBuffer.method227((byte) -27, 14);
+				Class66.byteBuffer.method227((byte) -27, i);
 				Class4_Sub20_Sub17.aClass76_3189.method1183(2, 0, arg0 ^ ~0x24,
-						Class66.aClass4_Sub11_Sub1_1328.byteBuffer);
+						Class66.byteBuffer.byteBuffer);
 				Class4_Sub20_Sub5.aClass4_Sub11_Sub1_2883.pointion = 0;
 				RSFont.anInt148 = 3;
 			}
@@ -164,24 +164,24 @@ public class Class13_Sub2 extends Class13 implements ImageProducer,
 				}
 			}
 			if ((RSFont.anInt148 ^ 0xffffffff) == -6) {
-				Class66.aClass4_Sub11_Sub1_1328.pointion = 0;
+				Class66.byteBuffer.pointion = 0;
 				int[] is = new int[4];
 				is[0] = (int) (Math.random() * 9.9999999E7);
 				is[2] = (int) (Class19.aLong524 >> -63538976);
 				is[3] = (int) Class19.aLong524;
 				is[1] = (int) (Math.random() * 9.9999999E7);
-				Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27, 10);
-				Class66.aClass4_Sub11_Sub1_1328.method236(arg0 + 276, is[0]);
-				Class66.aClass4_Sub11_Sub1_1328.method236(181, is[1]);
-				Class66.aClass4_Sub11_Sub1_1328.method236(arg0 + 276, is[2]);
-				Class66.aClass4_Sub11_Sub1_1328.method236(arg0 ^ ~0xeb, is[3]);
-				Class66.aClass4_Sub11_Sub1_1328.method236(181,
+				Class66.byteBuffer.method227((byte) -27, 10);
+				Class66.byteBuffer.putInt(arg0 + 276, is[0]);
+				Class66.byteBuffer.putInt(181, is[1]);
+				Class66.byteBuffer.putInt(arg0 + 276, is[2]);
+				Class66.byteBuffer.putInt(arg0 ^ ~0xeb, is[3]);
+				Class66.byteBuffer.putInt(181,
 						Class43.aClass75_872.anInt1542);
-				Class66.aClass4_Sub11_Sub1_1328.method255(189354448,
+				Class66.byteBuffer.putLong(189354448,
 						Class34.aClass26_1768.method806((byte) -123));
-				Class66.aClass4_Sub11_Sub1_1328.method259(
+				Class66.byteBuffer.method259(
 						Class34.aClass26_1764, 18601);
-				Class66.aClass4_Sub11_Sub1_1328.method233(
+				Class66.byteBuffer.method233(
 						(Class12.aBigInteger350), (Class49.aBigInteger994),
 						arg0 ^ 0x63d6);
 				Class4_Sub1.aClass4_Sub11_Sub1_1854.pointion = 0;
@@ -192,49 +192,49 @@ public class Class13_Sub2 extends Class13 implements ImageProducer,
 					Class4_Sub1.aClass4_Sub11_Sub1_1854.method227((byte) -27,
 							16);
 				Class4_Sub1.aClass4_Sub11_Sub1_1854.method227((byte) -27,
-						Class66.aClass4_Sub11_Sub1_1328.pointion + 69);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(arg0 + 276, 464);
+						Class66.byteBuffer.pointion + 69);
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(arg0 + 276, 464);
 				Class4_Sub1.aClass4_Sub11_Sub1_1854.method227((byte) -27,
 						!Class59.aBoolean1189 ? 0 : 1);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(arg0 ^ ~0xeb,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(arg0 ^ ~0xeb,
 						Class73.aClass19_Sub1_1504.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(arg0 ^ ~0xeb,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(arg0 ^ ~0xeb,
 						Class4_Sub1.aClass19_Sub1_1861.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(arg0 ^ ~0xeb,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(arg0 ^ ~0xeb,
 						Class4_Sub1.aClass19_Sub1_1863.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Class4_Sub17.aClass19_Sub1_2321.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Class66.aClass19_Sub1_1336.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Class4_Sub20_Sub6.aClass19_Sub1_2911.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(arg0 ^ ~0xeb,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(arg0 ^ ~0xeb,
 						Class54.aClass19_Sub1_1107.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Class4_Sub24.aClass19_Sub1_2451.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Client.aClass19_Sub1_1849.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Class18.aClass19_Sub1_482.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(arg0 + 276,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(arg0 + 276,
 						Class77.aClass19_Sub1_1589.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Class24.aClass19_Sub1_562.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Class4_Sub20_Sub14.aClass19_Sub1_3146.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Class4_Sub20_Sub6.aClass19_Sub1_2921.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(181,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(181,
 						Class4_Sub17.aClass19_Sub1_2327.anInt492);
-				Class4_Sub1.aClass4_Sub11_Sub1_1854.method236(arg0 + 276,
+				Class4_Sub1.aClass4_Sub11_Sub1_1854.putInt(arg0 + 276,
 						Class42.aClass19_Sub1_856.anInt492);
 				Class4_Sub1.aClass4_Sub11_Sub1_1854.method232(
-						Class66.aClass4_Sub11_Sub1_1328.byteBuffer, 0,
-						(byte) -104, Class66.aClass4_Sub11_Sub1_1328.pointion);
+						Class66.byteBuffer.byteBuffer, 0,
+						(byte) -104, Class66.byteBuffer.pointion);
 				Class4_Sub20_Sub17.aClass76_3189.method1183(
 						Class4_Sub1.aClass4_Sub11_Sub1_1854.pointion, 0, 125,
 						Class4_Sub1.aClass4_Sub11_Sub1_1854.byteBuffer);
-				Class66.aClass4_Sub11_Sub1_1328.method273(is, (byte) -104);
+				Class66.byteBuffer.method273(is, (byte) -104);
 				for (int i = 0; i < 4; i++)
 					is[i] += 50;
 				Class4_Sub20_Sub5.aClass4_Sub11_Sub1_2883.method273(is,

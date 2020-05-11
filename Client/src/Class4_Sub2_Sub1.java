@@ -74,7 +74,7 @@ public class Class4_Sub2_Sub1 extends Class4_Sub2 {
 				else if ((i_42_ ^ 0xffffffff) > (Class4_Sub20_Sub7_Sub6.anInt3431 ^ 0xffffffff))
 					class4_sub20_sub7_sub1 = (Class4_Sub20_Sub7_Sub4.aClass4_Sub20_Sub7_Sub1_Sub1Array3358[Class4_Sub23.anIntArray2432[i_42_]]);
 				else
-					class4_sub20_sub7_sub1 = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[(Class4_Sub11_Sub1.anIntArray2695[-Class4_Sub20_Sub7_Sub6.anInt3431
+					class4_sub20_sub7_sub1 = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[(ByteBuffer.anIntArray2695[-Class4_Sub20_Sub7_Sub6.anInt3431
 							+ i_42_])]);
 				if (class4_sub20_sub7_sub1 != null
 						&& class4_sub20_sub7_sub1.method384(-19456)) {
@@ -104,7 +104,7 @@ public class Class4_Sub2_Sub1 extends Class4_Sub2 {
 														- (-SceneGraph.anInt2502 + 30));
 						}
 						if ((Class57.anInt1141 ^ 0xffffffff) == -2
-								&& (((Class4_Sub11_Sub1.anIntArray2695[i_42_
+								&& (((ByteBuffer.anIntArray2695[i_42_
 										+ -Class4_Sub20_Sub7_Sub6.anInt3431]) ^ 0xffffffff) == (Class10.anInt313 ^ 0xffffffff))
 								&& (Region.anInt134 % 20 ^ 0xffffffff) > -11) {
 							Class24.method794(

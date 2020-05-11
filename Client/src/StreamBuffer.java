@@ -142,8 +142,8 @@ public class StreamBuffer extends RSFont {
 					Class2.anInt96 = JagexException.anInt1729;
 					Class72.anInt1492++;
 					Class11.anInt331 = 0;
-					Class66.aClass4_Sub11_Sub1_1328.method264(180, 126);
-					Class66.aClass4_Sub11_Sub1_1328.method207(i_2_, 2018779304);
+					Class66.byteBuffer.putOpcode(180, 126);
+					Class66.byteBuffer.putShort(i_2_, 2018779304);
 				}
 			}
 			if (i == 47) {
@@ -168,37 +168,37 @@ public class StreamBuffer extends RSFont {
 					Class28.anInt640 = 2;
 					Class57.anInt1155 = Class37.anInt758;
 					Class11.anInt331 = 0;
-					Class66.aClass4_Sub11_Sub1_1328.method264(43, 114);
-					Class66.aClass4_Sub11_Sub1_1328.method224(arg0 + 13421,
+					Class66.byteBuffer.putOpcode(43, 114);
+					Class66.byteBuffer.putLEShort(arg0 + 13421,
 							i_2_);
 				}
 			}
 			if ((i ^ 0xffffffff) == -21) {
 				Class4_Sub20_Sub4.anInt2844++;
-				Class66.aClass4_Sub11_Sub1_1328.method264(159, -107);
-				Class66.aClass4_Sub11_Sub1_1328.method244(116, i_3_);
-				Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_1_);
-				Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_2_);
+				Class66.byteBuffer.putOpcode(159, -107);
+				Class66.byteBuffer.method244(116, i_3_);
+				Class66.byteBuffer.putLEShort(13421, i_1_);
+				Class66.byteBuffer.putLEShort(13421, i_2_);
 				Class18.anInt475 = 0;
 				Class46.rsInterface = Class4_Sub20.method322(true, i_3_);
 				Class4_Sub20_Sub7_Sub6.anInt3443 = i_1_;
 			}
 			if (i == 29) {
-				Class66.aClass4_Sub11_Sub1_1328.method264(177, -61);
-				Class66.aClass4_Sub11_Sub1_1328.method207(i_2_, 2018779304);
+				Class66.byteBuffer.putOpcode(177, -61);
+				Class66.byteBuffer.putShort(i_2_, 2018779304);
 				Class4_Sub14.anInt2283++;
-				Class66.aClass4_Sub11_Sub1_1328.method211(i_3_, -1387540232);
-				Class66.aClass4_Sub11_Sub1_1328.method207(i_1_, 2018779304);
+				Class66.byteBuffer.method211(i_3_, -1387540232);
+				Class66.byteBuffer.putShort(i_1_, 2018779304);
 				Class18.anInt475 = 0;
 				Class46.rsInterface = Class4_Sub20.method322(true, i_3_);
 				Class4_Sub20_Sub7_Sub6.anInt3443 = i_1_;
 			}
 			if ((i ^ 0xffffffff) == -5) {
 				Class64.anInt1271++;
-				Class66.aClass4_Sub11_Sub1_1328.method264(4, -108);
-				Class66.aClass4_Sub11_Sub1_1328.method251(i_1_, (byte) 53);
-				Class66.aClass4_Sub11_Sub1_1328.method207(i_2_, 2018779304);
-				Class66.aClass4_Sub11_Sub1_1328.method244(98, i_3_);
+				Class66.byteBuffer.putOpcode(4, -108);
+				Class66.byteBuffer.putLEShortA(i_1_, (byte) 53);
+				Class66.byteBuffer.putShort(i_2_, 2018779304);
+				Class66.byteBuffer.method244(98, i_3_);
 				Class18.anInt475 = 0;
 				Class46.rsInterface = Class4_Sub20.method322(true, i_3_);
 				Class4_Sub20_Sub7_Sub6.anInt3443 = i_1_;
@@ -225,8 +225,8 @@ public class StreamBuffer extends RSFont {
 					Class57.anInt1155 = Class37.anInt758;
 					Class4_Sub15.anInt2296++;
 					Class11.anInt331 = 0;
-					Class66.aClass4_Sub11_Sub1_1328.method264(181, arg0 + 110);
-					Class66.aClass4_Sub11_Sub1_1328.method207(i_2_,
+					Class66.byteBuffer.putOpcode(181, arg0 + 110);
+					Class66.byteBuffer.putShort(i_2_,
 							arg0 + 2018779304);
 				}
 			}
@@ -280,9 +280,9 @@ public class StreamBuffer extends RSFont {
 						Class11.anInt331 = 0;
 						Class28.anInt640 = 2;
 						Class2.anInt96 = JagexException.anInt1729;
-						Class66.aClass4_Sub11_Sub1_1328.method264(51, arg0
+						Class66.byteBuffer.putOpcode(51, arg0
 								^ ~0x72);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-112, i_2_);
+						Class66.byteBuffer.putShortA(-112, i_2_);
 					}
 				}
 				if ((i ^ 0xffffffff) == -52)
@@ -309,9 +309,9 @@ public class StreamBuffer extends RSFont {
 						Class57.anInt1155 = Class37.anInt758;
 						Class11.anInt331 = 0;
 						Class2.anInt96 = JagexException.anInt1729;
-						Class66.aClass4_Sub11_Sub1_1328.method264(129, arg0
+						Class66.byteBuffer.putOpcode(129, arg0
 								^ ~0x53);
-						Class66.aClass4_Sub11_Sub1_1328.method224(
+						Class66.byteBuffer.putLEShort(
 								arg0 ^ 0x346d, i_2_);
 					}
 				}
@@ -320,9 +320,9 @@ public class StreamBuffer extends RSFont {
 							i_3_);
 					if (class4_sub13 == null
 							|| class4_sub13.anIntArray2216[i_1_] < 100000) {
-						Class66.aClass4_Sub11_Sub1_1328.method264(205,
+						Class66.byteBuffer.putOpcode(205,
 								arg0 + 107);
-						Class66.aClass4_Sub11_Sub1_1328.method207(i_2_,
+						Class66.byteBuffer.putShort(i_2_,
 								arg0 ^ 0x785420a8);
 						Class73.anInt1496++;
 					} else
@@ -364,8 +364,8 @@ public class StreamBuffer extends RSFont {
 						Class7.anInt233++;
 						Class57.anInt1155 = Class37.anInt758;
 						Class2.anInt96 = JagexException.anInt1729;
-						Class66.aClass4_Sub11_Sub1_1328.method264(162, 122);
-						Class66.aClass4_Sub11_Sub1_1328.method251(i_2_,
+						Class66.byteBuffer.putOpcode(162, 122);
+						Class66.byteBuffer.putLEShortA(i_2_,
 								(byte) 53);
 					}
 				}
@@ -404,12 +404,12 @@ public class StreamBuffer extends RSFont {
 					Class2.anInt96 = JagexException.anInt1729;
 					Class11.anInt331 = 0;
 					Class57.anInt1155 = Class37.anInt758;
-					Class66.aClass4_Sub11_Sub1_1328.method264(20, arg0 ^ ~0x4);
-					Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_1_
+					Class66.byteBuffer.putOpcode(20, arg0 ^ ~0x4);
+					Class66.byteBuffer.putLEShort(13421, i_1_
 							- -Class6.anInt217);
-					Class66.aClass4_Sub11_Sub1_1328.method207(i_2_,
+					Class66.byteBuffer.putShort(i_2_,
 							arg0 ^ 0x785420a8);
-					Class66.aClass4_Sub11_Sub1_1328.method224(arg0 + 13421,
+					Class66.byteBuffer.putLEShort(arg0 + 13421,
 							Class4_Sub20_Sub8.anInt2987 + i_3_);
 				}
 				if (i == 1005) {
@@ -418,8 +418,8 @@ public class StreamBuffer extends RSFont {
 					Class11.anInt331 = 0;
 					Class57.anInt1155 = Class37.anInt758;
 					Class82.anInt1718++;
-					Class66.aClass4_Sub11_Sub1_1328.method264(97, -1);
-					Class66.aClass4_Sub11_Sub1_1328.method218(-104,
+					Class66.byteBuffer.putOpcode(97, -1);//examine packet
+					Class66.byteBuffer.putShortA(-104,//object ID
 							0x7fff & i_2_ >> 430998190);
 				}
 				if (i == 32) {
@@ -457,11 +457,11 @@ public class StreamBuffer extends RSFont {
 					Class2.anInt96 = JagexException.anInt1729;
 					Class11.anInt331 = 0;
 					Class57.anInt1155 = Class37.anInt758;
-					Class66.aClass4_Sub11_Sub1_1328.method264(216, -47);
-					Class66.aClass4_Sub11_Sub1_1328.method207(i_2_, 2018779304);
-					Class66.aClass4_Sub11_Sub1_1328.method218(60,
+					Class66.byteBuffer.putOpcode(216, -47);
+					Class66.byteBuffer.putShort(i_2_, 2018779304);
+					Class66.byteBuffer.putShortA(60,
 							Class4_Sub20_Sub8.anInt2987 + i_3_);
-					Class66.aClass4_Sub11_Sub1_1328.method251(Class6.anInt217
+					Class66.byteBuffer.putLEShortA(Class6.anInt217
 							+ i_1_, (byte) 53);
 				}
 				if (i == 1) {
@@ -499,11 +499,11 @@ public class StreamBuffer extends RSFont {
 					Class2.anInt96 = JagexException.anInt1729;
 					Class28.anInt640 = 2;
 					Class11.anInt331 = 0;
-					Class66.aClass4_Sub11_Sub1_1328.method264(144, -59);
-					Class66.aClass4_Sub11_Sub1_1328.method207(i_1_
+					Class66.byteBuffer.putOpcode(144, -59);
+					Class66.byteBuffer.putShort(i_1_
 							+ Class6.anInt217, arg0 ^ 0x785420a8);
-					Class66.aClass4_Sub11_Sub1_1328.method207(i_2_, 2018779304);
-					Class66.aClass4_Sub11_Sub1_1328.method218(55, i_3_
+					Class66.byteBuffer.putShort(i_2_, 2018779304);
+					Class66.byteBuffer.putShortA(55, i_3_
 							- -Class4_Sub20_Sub8.anInt2987);
 				}
 				if ((i ^ 0xffffffff) == -7) {
@@ -541,11 +541,11 @@ public class StreamBuffer extends RSFont {
 					Class57.anInt1155 = Class37.anInt758;
 					Class11.anInt331 = 0;
 					Class28.anInt640 = 2;
-					Class66.aClass4_Sub11_Sub1_1328.method264(255, 116);
-					Class66.aClass4_Sub11_Sub1_1328.method207(i_2_, 2018779304);
-					Class66.aClass4_Sub11_Sub1_1328.method224(13421,
+					Class66.byteBuffer.putOpcode(255, 116);
+					Class66.byteBuffer.putShort(i_2_, 2018779304);
+					Class66.byteBuffer.putLEShort(13421,
 							Class6.anInt217 + i_1_);
-					Class66.aClass4_Sub11_Sub1_1328.method207(
+					Class66.byteBuffer.putShort(
 							Class4_Sub20_Sub8.anInt2987 + i_3_,
 							arg0 ^ 0x785420a8);
 				}
@@ -572,21 +572,21 @@ public class StreamBuffer extends RSFont {
 					if (i == 12) {
 						Class4_Sub20_Sub8.anInt2960++;
 						Class25.method798(i_2_, i_3_, i_1_, 0);
-						Class66.aClass4_Sub11_Sub1_1328.method264(44, -46);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421,
+						Class66.byteBuffer.putOpcode(44, -46);
+						Class66.byteBuffer.putLEShort(13421,
 								i_2_ >> 1921194254 & 0x7fff);
-						Class66.aClass4_Sub11_Sub1_1328.method207(
+						Class66.byteBuffer.putShort(
 								Class6.anInt217 + i_1_, 2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method224(
+						Class66.byteBuffer.putLEShort(
 								arg0 ^ 0x346d, Class4_Sub20_Sub8.anInt2987
 										+ i_3_);
 					}
 					if (i == 28) {
-						Class66.aClass4_Sub11_Sub1_1328.method264(215, -88);
+						Class66.byteBuffer.putOpcode(215, -88);
 						Class54.anInt1091++;
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_1_);
-						Class66.aClass4_Sub11_Sub1_1328.method244(98, i_3_);
-						Class66.aClass4_Sub11_Sub1_1328.method224(arg0 + 13421,
+						Class66.byteBuffer.putLEShort(13421, i_1_);
+						Class66.byteBuffer.method244(98, i_3_);
+						Class66.byteBuffer.putLEShort(arg0 + 13421,
 								i_2_);
 						Class18.anInt475 = 0;
 						Class46.rsInterface = Class4_Sub20.method322(
@@ -599,12 +599,12 @@ public class StreamBuffer extends RSFont {
 					if ((i ^ 0xffffffff) == -1004) {
 						Class12.anInt356++;
 						Class25.method798(i_2_, i_3_, i_1_, 0);
-						Class66.aClass4_Sub11_Sub1_1328.method264(250, 108);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-107, i_3_
+						Class66.byteBuffer.putOpcode(250, 108);
+						Class66.byteBuffer.putShortA(-107, i_3_
 								- -Class4_Sub20_Sub8.anInt2987);
-						Class66.aClass4_Sub11_Sub1_1328.method207(
+						Class66.byteBuffer.putShort(
 								(0x1fffc6b3 & i_2_) >> 551356174, 2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method207(i_1_
+						Class66.byteBuffer.putShort(i_1_
 								+ Class6.anInt217, 2018779304);
 					}
 					if ((i ^ 0xffffffff) == -39) {
@@ -629,12 +629,12 @@ public class StreamBuffer extends RSFont {
 							Class11.anInt331 = 0;
 							Class28.anInt640 = 2;
 							Class57.anInt1155 = Class37.anInt758;
-							Class66.aClass4_Sub11_Sub1_1328.method264(69, -83);
-							Class66.aClass4_Sub11_Sub1_1328.method207(
+							Class66.byteBuffer.putOpcode(69, -83);
+							Class66.byteBuffer.putShort(
 									Class4_Sub20_Sub11.anInt3088, 2018779304);
-							Class66.aClass4_Sub11_Sub1_1328.method236(181,
+							Class66.byteBuffer.putInt(181,
 									Class4_Sub20.anInt2357);
-							Class66.aClass4_Sub11_Sub1_1328.method207(i_2_,
+							Class66.byteBuffer.putShort(i_2_,
 									2018779304);
 						}
 					}
@@ -673,22 +673,22 @@ public class StreamBuffer extends RSFont {
 						Class4_Sub20_Sub17.anInt3203++;
 						Class2.anInt96 = JagexException.anInt1729;
 						Class11.anInt331 = 0;
-						Class66.aClass4_Sub11_Sub1_1328.method264(221, 126);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_2_);
-						Class66.aClass4_Sub11_Sub1_1328.method224(arg0 + 13421,
+						Class66.byteBuffer.putOpcode(221, 126);
+						Class66.byteBuffer.putLEShort(13421, i_2_);
+						Class66.byteBuffer.putLEShort(arg0 + 13421,
 								Class4_Sub20_Sub8.anInt2987 + i_3_);
-						Class66.aClass4_Sub11_Sub1_1328.method251(
+						Class66.byteBuffer.putLEShortA(
 								Class6.anInt217 + i_1_, (byte) 53);
 					}
 					if ((i ^ 0xffffffff) == -15) {
 						Class25.method798(i_2_, i_3_, i_1_, arg0);
 						Class66.anInt1327++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(120, -99);
-						Class66.aClass4_Sub11_Sub1_1328.method207(i_3_
+						Class66.byteBuffer.putOpcode(120, -99);
+						Class66.byteBuffer.putShort(i_3_
 								- -Class4_Sub20_Sub8.anInt2987, 2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-8,
+						Class66.byteBuffer.putShortA(-8,
 								i_2_ >> 618647726 & 0x7fff);
-						Class66.aClass4_Sub11_Sub1_1328.method218(56, i_1_
+						Class66.byteBuffer.putShortA(56, i_1_
 								- -Class6.anInt217);
 					}
 					if ((i ^ 0xffffffff) == -31) {
@@ -713,23 +713,23 @@ public class StreamBuffer extends RSFont {
 							Class57.anInt1155 = Class37.anInt758;
 							Class11.anInt331 = 0;
 							Class4_Sub20_Sub15.anInt3153++;
-							Class66.aClass4_Sub11_Sub1_1328.method264(27, -77);
-							Class66.aClass4_Sub11_Sub1_1328.method251(
+							Class66.byteBuffer.putOpcode(27, -77);
+							Class66.byteBuffer.putLEShortA(
 									Class35.anInt730, (byte) 53);
-							Class66.aClass4_Sub11_Sub1_1328.method224(13421,
+							Class66.byteBuffer.putLEShort(13421,
 									i_2_);
-							Class66.aClass4_Sub11_Sub1_1328.method207(
+							Class66.byteBuffer.putShort(
 									Class43.anInt887, 2018779304);
-							Class66.aClass4_Sub11_Sub1_1328.method244(
+							Class66.byteBuffer.method244(
 									arg0 ^ 0x61, Class57.anInt1142);
 						}
 					}
 					if ((i ^ 0xffffffff) == -40) {
-						Class66.aClass4_Sub11_Sub1_1328.method264(88, 107);
-						Class66.aClass4_Sub11_Sub1_1328.method244(96, i_3_);
+						Class66.byteBuffer.putOpcode(88, 107);
+						Class66.byteBuffer.method244(96, i_3_);
 						Class30.anInt657++;
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_2_);
-						Class66.aClass4_Sub11_Sub1_1328.method251(i_1_,
+						Class66.byteBuffer.putLEShort(13421, i_2_);
+						Class66.byteBuffer.putLEShortA(i_1_,
 								(byte) 53);
 						Class18.anInt475 = 0;
 						Class46.rsInterface = Class4_Sub20.method322(
@@ -738,12 +738,12 @@ public class StreamBuffer extends RSFont {
 					}
 					if (i == 41) {
 						Class4_Sub8.anInt1967++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(212, -44);
-						Class66.aClass4_Sub11_Sub1_1328.method211(i_3_,
+						Class66.byteBuffer.putOpcode(212, -44);
+						Class66.byteBuffer.method211(i_3_,
 								-1387540232);
-						Class66.aClass4_Sub11_Sub1_1328.method251(i_1_,
+						Class66.byteBuffer.putLEShortA(i_1_,
 								(byte) 53);
-						Class66.aClass4_Sub11_Sub1_1328.method224(
+						Class66.byteBuffer.putLEShort(
 								arg0 ^ 0x346d, i_2_);
 						Class18.anInt475 = 0;
 						Class46.rsInterface = Class4_Sub20.method322(
@@ -752,8 +752,8 @@ public class StreamBuffer extends RSFont {
 					}
 					if (i == 33) {
 						Class1.anInt73++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(153, -92);
-						Class66.aClass4_Sub11_Sub1_1328.method236(arg0 ^ 0xb5,
+						Class66.byteBuffer.putOpcode(153, -92);
+						Class66.byteBuffer.putInt(arg0 ^ 0xb5,
 								i_3_);
 						RSInterface class4_sub13 = Class4_Sub20.method322(
 								true, i_3_);
@@ -801,18 +801,18 @@ public class StreamBuffer extends RSFont {
 						Class28.anInt640 = 2;
 						Class2.anInt96 = JagexException.anInt1729;
 						Class57.anInt1155 = Class37.anInt758;
-						Class66.aClass4_Sub11_Sub1_1328.method264(152, 127);
-						Class66.aClass4_Sub11_Sub1_1328.method236(181,
+						Class66.byteBuffer.putOpcode(152, 127);
+						Class66.byteBuffer.putInt(181,
 								Class57.anInt1142);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-13, i_1_
+						Class66.byteBuffer.putShortA(-13, i_1_
 								- -Class6.anInt217);
-						Class66.aClass4_Sub11_Sub1_1328.method251(
+						Class66.byteBuffer.putLEShortA(
 								Class43.anInt887, (byte) 53);
-						Class66.aClass4_Sub11_Sub1_1328.method251(i_2_,
+						Class66.byteBuffer.putLEShortA(i_2_,
 								(byte) 53);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-99,
+						Class66.byteBuffer.putShortA(-99,
 								Class35.anInt730);
-						Class66.aClass4_Sub11_Sub1_1328.method207(
+						Class66.byteBuffer.putShort(
 								Class4_Sub20_Sub8.anInt2987 + i_3_, 2018779304);
 					}
 					if (i == 7) {
@@ -836,13 +836,13 @@ public class StreamBuffer extends RSFont {
 							Class57.anInt1155 = Class37.anInt758;
 							Class2.anInt96 = JagexException.anInt1729;
 							Class28.anInt640 = 2;
-							Class66.aClass4_Sub11_Sub1_1328.method264(123, 120);
-							Class66.aClass4_Sub11_Sub1_1328
-									.method224(arg0 ^ 0x346d,
+							Class66.byteBuffer.putOpcode(123, 120);
+							Class66.byteBuffer
+									.putLEShort(arg0 ^ 0x346d,
 											Class4_Sub20_Sub11.anInt3088);
-							Class66.aClass4_Sub11_Sub1_1328.method251(i_2_,
+							Class66.byteBuffer.putLEShortA(i_2_,
 									(byte) 53);
-							Class66.aClass4_Sub11_Sub1_1328.method244(94,
+							Class66.byteBuffer.method244(94,
 									Class4_Sub20.anInt2357);
 							Class5.anInt182++;
 						}
@@ -851,12 +851,12 @@ public class StreamBuffer extends RSFont {
 						aClass64_2096 = null;
 					if (i == 21) {
 						Class4_Sub20_Sub17.anInt3204++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(86, 117);
-						Class66.aClass4_Sub11_Sub1_1328.method224(
+						Class66.byteBuffer.putOpcode(86, 117);
+						Class66.byteBuffer.putLEShort(
 								arg0 ^ 0x346d, i_1_);
-						Class66.aClass4_Sub11_Sub1_1328.method207(i_2_,
+						Class66.byteBuffer.putShort(i_2_,
 								2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method230(false, i_3_);
+						Class66.byteBuffer.method230(false, i_3_);
 						Class18.anInt475 = 0;
 						Class46.rsInterface = Class4_Sub20.method322(
 								true, i_3_);
@@ -864,19 +864,19 @@ public class StreamBuffer extends RSFont {
 					}
 					if ((i ^ 0xffffffff) == -16
 							&& Class25.method798(i_2_, i_3_, i_1_, 0)) {
-						Class66.aClass4_Sub11_Sub1_1328.method264(103, -25);
-						Class66.aClass4_Sub11_Sub1_1328.method218(74,
+						Class66.byteBuffer.putOpcode(103, -25);
+						Class66.byteBuffer.putShortA(74,
 								Class4_Sub20_Sub8.anInt2987 + i_3_);
-						Class66.aClass4_Sub11_Sub1_1328.method207(
+						Class66.byteBuffer.putShort(
 								Class43.anInt887, 2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method251(i_1_
+						Class66.byteBuffer.putLEShortA(i_1_
 								+ Class6.anInt217, (byte) 53);
-						Class66.aClass4_Sub11_Sub1_1328.method230(false,
+						Class66.byteBuffer.method230(false,
 								Class57.anInt1142);
-						Class66.aClass4_Sub11_Sub1_1328.method218(arg0 + 52,
+						Class66.byteBuffer.putShortA(arg0 + 52,
 								Class35.anInt730);
 						Region.anInt117++;
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421,
+						Class66.byteBuffer.putLEShort(13421,
 								i_2_ >> 559792750 & 0x7fff);
 					}
 					if (i == 1001) {
@@ -884,9 +884,9 @@ public class StreamBuffer extends RSFont {
 						Class28.anInt640 = 2;
 						Class57.anInt1155 = Class37.anInt758;
 						Class11.anInt331 = 0;
-						Class66.aClass4_Sub11_Sub1_1328.method264(205, 112);
+						Class66.byteBuffer.putOpcode(205, 112);
 						Class73.anInt1496++;
-						Class66.aClass4_Sub11_Sub1_1328.method207(i_2_,
+						Class66.byteBuffer.putShort(i_2_,
 								arg0 + 2018779304);
 					}
 					if (i == 44) {
@@ -911,16 +911,16 @@ public class StreamBuffer extends RSFont {
 							Class11.anInt331 = 0;
 							Class28.anInt640 = 2;
 							Class57.anInt1155 = Class37.anInt758;
-							Class66.aClass4_Sub11_Sub1_1328.method264(19, -31);
-							Class66.aClass4_Sub11_Sub1_1328.method251(i_2_,
+							Class66.byteBuffer.putOpcode(19, -31);
+							Class66.byteBuffer.putLEShortA(i_2_,
 									(byte) 53);
 						}
 					}
 					if (i == 8) {
-						Class66.aClass4_Sub11_Sub1_1328.method264(153,
+						Class66.byteBuffer.putOpcode(153,
 								arg0 ^ 0x7e);
 						Class1.anInt73++;
-						Class66.aClass4_Sub11_Sub1_1328.method236(181, i_3_);
+						Class66.byteBuffer.putInt(181, i_3_);
 						RSInterface class4_sub13 = Class4_Sub20.method322(
 								true, i_3_);
 						if (class4_sub13.anIntArrayArray2134 != null
@@ -931,21 +931,21 @@ public class StreamBuffer extends RSFont {
 						}
 					}
 					if (i == 19 && RSInterface.aClass4_Sub13_2141 == null) {
-						Class78.method1195(i_1_, i_3_, false);
+						Class78.closeInterface(i_1_, i_3_, false);
 						RSInterface.aClass4_Sub13_2141 = Class54.method1012(
 								i_3_, -1, i_1_);
 						Class67.method1088(RSInterface.aClass4_Sub13_2141, 0);
 					}
 					if ((i ^ 0xffffffff) == -50) {
 						Class4_Sub20_Sub8.anInt3004++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(142, -109);
-						Class66.aClass4_Sub11_Sub1_1328.method207(
+						Class66.byteBuffer.putOpcode(142, -109);
+						Class66.byteBuffer.putShort(
 								Class4_Sub20_Sub11.anInt3088, 2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method211(i_3_, arg0
+						Class66.byteBuffer.method211(i_3_, arg0
 								^ ~0x52b42f07);
-						Class66.aClass4_Sub11_Sub1_1328.method211(
+						Class66.byteBuffer.method211(
 								Class4_Sub20.anInt2357, -1387540232);
-						Class66.aClass4_Sub11_Sub1_1328.method207(i_1_,
+						Class66.byteBuffer.putShort(i_1_,
 								2018779304);
 					}
 					if (i == 11) {
@@ -983,59 +983,59 @@ public class StreamBuffer extends RSFont {
 						Class57.anInt1155 = Class37.anInt758;
 						Class2.anInt96 = JagexException.anInt1729;
 						Class28.anInt640 = 2;
-						Class66.aClass4_Sub11_Sub1_1328.method264(63, 117);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-103,
+						Class66.byteBuffer.putOpcode(63, 117);
+						Class66.byteBuffer.putShortA(-103,
 								Class4_Sub20_Sub11.anInt3088);
-						Class66.aClass4_Sub11_Sub1_1328.method236(arg0 ^ 0xb5,
+						Class66.byteBuffer.putInt(arg0 ^ 0xb5,
 								Class4_Sub20.anInt2357);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_3_
+						Class66.byteBuffer.putLEShort(13421, i_3_
 								+ Class4_Sub20_Sub8.anInt2987);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-111,
+						Class66.byteBuffer.putShortA(-111,
 								Class6.anInt217 + i_1_);
-						Class66.aClass4_Sub11_Sub1_1328.method207(i_2_,
+						Class66.byteBuffer.putShort(i_2_,
 								2018779304);
 					}
 					if ((i ^ 0xffffffff) == -26
 							&& Class25.method798(i_2_, i_3_, i_1_, 0)) {
 						Class25.anInt580++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(207, 3);
-						Class66.aClass4_Sub11_Sub1_1328.method251(i_3_
+						Class66.byteBuffer.putOpcode(207, 3);
+						Class66.byteBuffer.putLEShortA(i_3_
 								+ Class4_Sub20_Sub8.anInt2987, (byte) 53);
-						Class66.aClass4_Sub11_Sub1_1328.method251(
+						Class66.byteBuffer.putLEShortA(
 								Class6.anInt217 + i_1_, (byte) 53);
-						Class66.aClass4_Sub11_Sub1_1328.method244(96,
+						Class66.byteBuffer.method244(96,
 								Class4_Sub20.anInt2357);
-						Class66.aClass4_Sub11_Sub1_1328.method207(
+						Class66.byteBuffer.putShort(
 								(i_2_ & 0x1ffff1c5) >> -1850884178,
 								arg0 + 2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421,
+						Class66.byteBuffer.putLEShort(13421,
 								Class4_Sub20_Sub11.anInt3088);
 					}
 					if ((i ^ 0xffffffff) == -32) {
 						Class13.anInt374++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(220, -65);
-						Class66.aClass4_Sub11_Sub1_1328.method218(arg0 ^ 0x66,
+						Class66.byteBuffer.putOpcode(220, -65);
+						Class66.byteBuffer.putShortA(arg0 ^ 0x66,
 								i_2_);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_1_);
-						Class66.aClass4_Sub11_Sub1_1328.method236(181, i_3_);
+						Class66.byteBuffer.putLEShort(13421, i_1_);
+						Class66.byteBuffer.putInt(181, i_3_);
 						Class18.anInt475 = 0;
 						Class46.rsInterface = Class4_Sub20.method322(
 								true, i_3_);
 						Class4_Sub20_Sub7_Sub6.anInt3443 = i_1_;
 					}
 					if ((i ^ 0xffffffff) == -24) {
-						Class66.aClass4_Sub11_Sub1_1328.method264(166, -103);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421,
+						Class66.byteBuffer.putOpcode(166, -103);
+						Class66.byteBuffer.putLEShort(13421,
 								Class43.anInt887);
 						Class33.anInt704++;
-						Class66.aClass4_Sub11_Sub1_1328.method207(i_1_,
+						Class66.byteBuffer.putShort(i_1_,
 								2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method251(i_2_,
+						Class66.byteBuffer.putLEShortA(i_2_,
 								(byte) 53);
-						Class66.aClass4_Sub11_Sub1_1328.method230(false,
+						Class66.byteBuffer.method230(false,
 								Class57.anInt1142);
-						Class66.aClass4_Sub11_Sub1_1328.method244(103, i_3_);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-98,
+						Class66.byteBuffer.method244(103, i_3_);
+						Class66.byteBuffer.putShortA(-98,
 								Class35.anInt730);
 						Class18.anInt475 = 0;
 						Class46.rsInterface = Class4_Sub20.method322(
@@ -1064,18 +1064,18 @@ public class StreamBuffer extends RSFont {
 							Class28.anInt640 = 2;
 							Class57.anInt1155 = Class37.anInt758;
 							Class2.anInt96 = JagexException.anInt1729;
-							Class66.aClass4_Sub11_Sub1_1328.method264(114, 111);
-							Class66.aClass4_Sub11_Sub1_1328.method207(i_2_,
+							Class66.byteBuffer.putOpcode(114, 111);
+							Class66.byteBuffer.putShort(i_2_,
 									arg0 ^ 0x785420a8);
 						}
 					}
 					if (i == 37) {
 						Class8.anInt248++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(101, -113);
-						Class66.aClass4_Sub11_Sub1_1328.method211(i_3_, arg0
+						Class66.byteBuffer.putOpcode(101, -113);
+						Class66.byteBuffer.method211(i_3_, arg0
 								+ -1387540232);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_1_);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_2_);
+						Class66.byteBuffer.putLEShort(13421, i_1_);
+						Class66.byteBuffer.putLEShort(13421, i_2_);
 						Class18.anInt475 = 0;
 						Class46.rsInterface = Class4_Sub20.method322(
 								true, i_3_);
@@ -1083,10 +1083,10 @@ public class StreamBuffer extends RSFont {
 					}
 					if (i == 45) {
 						Class66.anInt1317++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(247, -68);
-						Class66.aClass4_Sub11_Sub1_1328.method230(false, i_3_);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-98, i_2_);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_1_);
+						Class66.byteBuffer.putOpcode(247, -68);
+						Class66.byteBuffer.method230(false, i_3_);
+						Class66.byteBuffer.putShortA(-98, i_2_);
+						Class66.byteBuffer.putLEShort(13421, i_1_);
 						Class18.anInt475 = 0;
 						Class46.rsInterface = Class4_Sub20.method322(
 								true, i_3_);
@@ -1100,8 +1100,8 @@ public class StreamBuffer extends RSFont {
 							bool = RSFont.method71(arg0 + -124, class4_sub13);
 						if (bool) {
 							Class1.anInt73++;
-							Class66.aClass4_Sub11_Sub1_1328.method264(153, 115);
-							Class66.aClass4_Sub11_Sub1_1328.method236(
+							Class66.byteBuffer.putOpcode(153, 115);
+							Class66.byteBuffer.putInt(
 									arg0 ^ 0xb5, i_3_);
 						}
 					}
@@ -1127,9 +1127,9 @@ public class StreamBuffer extends RSFont {
 							Class11.anInt331 = 0;
 							Class57.anInt1155 = Class37.anInt758;
 							Class28.anInt640 = 2;
-							Class66.aClass4_Sub11_Sub1_1328.method264(117,
+							Class66.byteBuffer.putOpcode(117,
 									arg0 ^ 0x6e);
-							Class66.aClass4_Sub11_Sub1_1328.method218(-100,
+							Class66.byteBuffer.putShortA(-100,
 									i_2_);
 						}
 					}
@@ -1155,22 +1155,22 @@ public class StreamBuffer extends RSFont {
 							Class2.anInt96 = JagexException.anInt1729;
 							Class57.anInt1155 = Class37.anInt758;
 							Class11.anInt331 = 0;
-							Class66.aClass4_Sub11_Sub1_1328.method264(183,
+							Class66.byteBuffer.putOpcode(183,
 									arg0 + 117);
-							Class66.aClass4_Sub11_Sub1_1328.method251(i_2_,
+							Class66.byteBuffer.putLEShortA(i_2_,
 									(byte) 53);
 						}
 					}
 					if (i == 40) {
-						Class66.aClass4_Sub11_Sub1_1328.method264(163, 125);
-						Class66.aClass4_Sub11_Sub1_1328.method251(i_2_,
+						Class66.byteBuffer.putOpcode(163, 125);
+						Class66.byteBuffer.putLEShortA(i_2_,
 								(byte) 53);
 						Class62.anInt1234++;
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_1_);
-						Class66.aClass4_Sub11_Sub1_1328.method251(
+						Class66.byteBuffer.putLEShort(13421, i_1_);
+						Class66.byteBuffer.putLEShortA(
 								Class4_Sub20_Sub11.anInt3088, (byte) 53);
-						Class66.aClass4_Sub11_Sub1_1328.method230(false, i_3_);
-						Class66.aClass4_Sub11_Sub1_1328.method244(114,
+						Class66.byteBuffer.method230(false, i_3_);
+						Class66.byteBuffer.method244(114,
 								Class4_Sub20.anInt2357);
 						Class18.anInt475 = 0;
 						Class46.rsInterface = Class4_Sub20.method322(
@@ -1199,10 +1199,10 @@ public class StreamBuffer extends RSFont {
 							Class11.anInt331 = 0;
 							Class57.anInt1155 = Class37.anInt758;
 							Class2.anInt96 = JagexException.anInt1729;
-							Class66.aClass4_Sub11_Sub1_1328.method264(1, arg0
+							Class66.byteBuffer.putOpcode(1, arg0
 									+ -84);
-							Class66.aClass4_Sub11_Sub1_1328
-									.method218(-21, i_2_);
+							Class66.byteBuffer
+									.putShortA(-21, i_2_);
 						}
 					}
 					if ((i ^ 0xffffffff) == -47) {
@@ -1227,15 +1227,15 @@ public class StreamBuffer extends RSFont {
 							Class27.anInt626++;
 							Class57.anInt1155 = Class37.anInt758;
 							Class2.anInt96 = JagexException.anInt1729;
-							Class66.aClass4_Sub11_Sub1_1328
-									.method264(187, -123);
-							Class66.aClass4_Sub11_Sub1_1328.method236(
+							Class66.byteBuffer
+									.putOpcode(187, -123);
+							Class66.byteBuffer.putInt(
 									arg0 ^ 0xb5, Class57.anInt1142);
-							Class66.aClass4_Sub11_Sub1_1328
-									.method218(-98, i_2_);
-							Class66.aClass4_Sub11_Sub1_1328.method207(
+							Class66.byteBuffer
+									.putShortA(-98, i_2_);
+							Class66.byteBuffer.putShort(
 									Class35.anInt730, 2018779304);
-							Class66.aClass4_Sub11_Sub1_1328.method207(
+							Class66.byteBuffer.putShort(
 									Class43.anInt887, 2018779304);
 						}
 					}
@@ -1252,9 +1252,9 @@ public class StreamBuffer extends RSFont {
 										.method354((byte) 104);
 							if (class4_sub20_sub3 != null) {
 								Class53.anInt1085++;
-								Class66.aClass4_Sub11_Sub1_1328.method264(176,
+								Class66.byteBuffer.putOpcode(176,
 										120);
-								Class66.aClass4_Sub11_Sub1_1328.method251(
+								Class66.byteBuffer.putLEShortA(
 										class4_sub20_sub3.anInt2820, (byte) 53);
 							}
 						}
@@ -1281,8 +1281,8 @@ public class StreamBuffer extends RSFont {
 							Class28.anInt640 = 2;
 							Class57.anInt1155 = Class37.anInt758;
 							Class11.anInt331 = 0;
-							Class66.aClass4_Sub11_Sub1_1328.method264(156, -35);
-							Class66.aClass4_Sub11_Sub1_1328.method218(
+							Class66.byteBuffer.putOpcode(156, -35);
+							Class66.byteBuffer.putShortA(
 									arg0 ^ 0x2f, i_2_);
 						}
 					}
@@ -1308,33 +1308,33 @@ public class StreamBuffer extends RSFont {
 							Class28.anInt640 = 2;
 							Class2.anInt96 = JagexException.anInt1729;
 							Class57.anInt1155 = Class37.anInt758;
-							Class66.aClass4_Sub11_Sub1_1328.method264(84,
+							Class66.byteBuffer.putOpcode(84,
 									arg0 + 120);
-							Class66.aClass4_Sub11_Sub1_1328.method207(i_2_,
+							Class66.byteBuffer.putShort(i_2_,
 									2018779304);
 						}
 					}
 					if (i == 36) {
 						Class25.method798(i_2_, i_3_, i_1_, 0);
 						Class72.anInt1488++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(119, 113);
-						Class66.aClass4_Sub11_Sub1_1328.method207(
+						Class66.byteBuffer.putOpcode(119, 113);
+						Class66.byteBuffer.putShort(
 								Class6.anInt217 + i_1_, 2018779304);
-						Class66.aClass4_Sub11_Sub1_1328.method251(
+						Class66.byteBuffer.putLEShortA(
 								(i_2_ & 0x1fffd509) >> 1268673358, (byte) 53);
-						Class66.aClass4_Sub11_Sub1_1328.method251(i_3_
+						Class66.byteBuffer.putLEShortA(i_3_
 								- -Class4_Sub20_Sub8.anInt2987, (byte) 53);
 					}
 					if ((i ^ 0xffffffff) == -14) {
 						Class25.method798(i_2_, i_3_, i_1_, 0);
 						Class4_Sub17.anInt2330++;
-						Class66.aClass4_Sub11_Sub1_1328.method264(127, arg0
+						Class66.byteBuffer.putOpcode(127, arg0
 								+ -23);
-						Class66.aClass4_Sub11_Sub1_1328.method218(-108,
+						Class66.byteBuffer.putShortA(-108,
 								0x7fff & i_2_ >> -977817042);
-						Class66.aClass4_Sub11_Sub1_1328.method218(arg0 + 51,
+						Class66.byteBuffer.putShortA(arg0 + 51,
 								i_3_ + Class4_Sub20_Sub8.anInt2987);
-						Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_1_
+						Class66.byteBuffer.putLEShort(13421, i_1_
 								- -Class6.anInt217);
 					}
 					if ((Class4_Sub20_Sub1.anInt2734 ^ 0xffffffff) != -1) {
@@ -1708,7 +1708,7 @@ public class StreamBuffer extends RSFont {
 		}
 	}
 
-	public void method207(int arg0, int arg1) {
+	public void putShort(int arg0, int arg1) {
 		try {
 			if (arg1 != 2018779304)
 				method242(-57);
@@ -1744,7 +1744,7 @@ public class StreamBuffer extends RSFont {
 		}
 	}
 
-	public void method210(int arg0, int arg1) {
+	public void putByteS(int arg0, int arg1) {
 		try {
 			anInt2112++;
 			byteBuffer[pointion++] = (byte) (arg1 + -arg0);
@@ -1837,7 +1837,7 @@ public class StreamBuffer extends RSFont {
 		}
 	}
 
-	public void method218(int arg0, int arg1) {
+	public void putShortA(int arg0, int arg1) {
 		try {
 			anInt2063++;
 			byteBuffer[pointion++] = (byte) (arg1 >> -508699864);
@@ -1906,16 +1906,16 @@ public class StreamBuffer extends RSFont {
 		}
 	}
 
-	public void method224(int arg0, int arg1) {
+	public void putLEShort(int arg0, int data) {
 		try {
 			if (arg0 != 13421)
 				method238((byte) 125);
-			byteBuffer[pointion++] = (byte) arg1;
+			byteBuffer[pointion++] = (byte) data;
 			anInt2059++;
-			byteBuffer[pointion++] = (byte) (arg1 >> 1446702280);
+			byteBuffer[pointion++] = (byte) (data >> 1446702280);
 		} catch (RuntimeException runtimeexception) {
 			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, ("m.WA("
-					+ arg0 + ',' + arg1 + ')'));
+					+ arg0 + ',' + data + ')'));
 		}
 	}
 
@@ -2047,7 +2047,7 @@ public class StreamBuffer extends RSFont {
 			int i = Class53.method1009((byte) -127, byteBuffer, arg0, pointion);
 			if (arg1 != 1)
 				return 91;
-			method236(181, i);
+			putInt(181, i);
 			return i;
 		} catch (RuntimeException runtimeexception) {
 			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, ("m.VB("
@@ -2067,18 +2067,18 @@ public class StreamBuffer extends RSFont {
 		}
 	}
 
-	public void method236(int arg0, int arg1) {
+	public void putInt(int arg0, int data) {
 		try {
 			anInt2056++;
-			byteBuffer[pointion++] = (byte) (arg1 >> 622136184);
-			byteBuffer[pointion++] = (byte) (arg1 >> 550550928);
-			byteBuffer[pointion++] = (byte) (arg1 >> 545485064);
+			byteBuffer[pointion++] = (byte) (data >> 622136184);
+			byteBuffer[pointion++] = (byte) (data >> 550550928);
+			byteBuffer[pointion++] = (byte) (data >> 545485064);
 			if (arg0 != 181)
-				method236(102, -54);
-			byteBuffer[pointion++] = (byte) arg1;
+				putInt(102, -54);
+			byteBuffer[pointion++] = (byte) data;
 		} catch (RuntimeException runtimeexception) {
 			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, ("m.QA("
-					+ arg0 + ',' + arg1 + ')'));
+					+ arg0 + ',' + data + ')'));
 		}
 	}
 
@@ -2099,7 +2099,7 @@ public class StreamBuffer extends RSFont {
 		try {
 			pointion += 2;
 			if (arg0 > -45)
-				method207(-7, -42);
+				putShort(-7, -42);
 			anInt2103++;
 			int i = ((byteBuffer[-1 + pointion] & 0xff) + ((0xff & byteBuffer[pointion
 					+ -2]) << -1101684792));
@@ -2115,7 +2115,7 @@ public class StreamBuffer extends RSFont {
 	public int method239(byte arg0) {
 		try {
 			if (arg0 < 28)
-				method236(30, -102);
+				putInt(30, -102);
 			anInt2060++;
 			return -128 + byteBuffer[pointion++] & 0xff;
 		} catch (RuntimeException runtimeexception) {
@@ -2168,10 +2168,10 @@ public class StreamBuffer extends RSFont {
 			if ((arg1 ^ 0xffffffff) <= -1 && arg1 < 128)
 				method227((byte) -27, arg1);
 			else if ((arg1 ^ 0xffffffff) <= -1 && (arg1 ^ 0xffffffff) > -32769)
-				method207(32768 - -arg1, arg0 ^ 0x78541628);
+				putShort(32768 - -arg1, arg0 ^ 0x78541628);
 			else {
 				if (arg0 != 13952)
-					method224(-12, 46);
+					putLEShort(-12, 46);
 				throw new IllegalArgumentException();
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -2184,7 +2184,7 @@ public class StreamBuffer extends RSFont {
 		try {
 			anInt2074++;
 			if (arg0 < 87)
-				method224(-114, -102);
+				putLEShort(-114, -102);
 			byteBuffer[pointion++] = (byte) arg1;
 			byteBuffer[pointion++] = (byte) (arg1 >> -313779192);
 			byteBuffer[pointion++] = (byte) (arg1 >> -61734032);
@@ -2228,8 +2228,8 @@ public class StreamBuffer extends RSFont {
 							^ arg2[i_17_ & 0x3] + i_17_;
 				}
 				pointion -= 8;
-				method236(181, i_16_);
-				method236(181, i_18_);
+				putInt(181, i_16_);
+				putInt(181, i_18_);
 			}
 			if (arg1 != 255)
 				byteBuffer = null;
@@ -2287,7 +2287,7 @@ public class StreamBuffer extends RSFont {
 		}
 	}
 
-	public void method251(int arg0, byte arg1) {
+	public void putLEShortA(int arg0, byte arg1) {
 		byteBuffer[pointion++] = (byte) (128 + arg0);
 		byteBuffer[pointion++] = (byte) (arg0 >> 970760744);
 		anInt2071++;
@@ -2344,7 +2344,7 @@ public class StreamBuffer extends RSFont {
 			aClass26_2115 = null;
 	}
 
-	public void method255(int arg0, long arg1) {
+	public void putLong(int arg0, long arg1) {
 		try {
 			anInt2090++;
 			byteBuffer[pointion++] = (byte) (int) (arg1 >> -810024136);
@@ -2371,7 +2371,7 @@ public class StreamBuffer extends RSFont {
 				method244(92, (int) arg1);
 				if (arg0 == 1918583904)
 					break;
-				method218(-24, -60);
+				putShortA(-24, -60);
 			} catch (RuntimeException runtimeexception) {
 				throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception,
 						("m.PB(" + arg0 + ',' + arg1 + ')'));

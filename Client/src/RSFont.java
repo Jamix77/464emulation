@@ -116,10 +116,10 @@ public class RSFont {
 			if (i == 325)
 				Class4_Sub24.aClass35_2438.method905(true, (byte) 77);
 			if (i == 326) {
-				Class66.aClass4_Sub11_Sub1_1328.method264(49, -105);
+				Class66.byteBuffer.putOpcode(49, -105);
 				Class4_Sub20_Sub4.anInt2847++;
 				Class4_Sub24.aClass35_2438.method908(
-						Class66.aClass4_Sub11_Sub1_1328, -113);
+						Class66.byteBuffer, -113);
 				return true;
 			}
 			return false;

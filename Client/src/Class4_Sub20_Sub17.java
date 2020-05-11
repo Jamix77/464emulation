@@ -150,7 +150,7 @@ public class Class4_Sub20_Sub17 extends Class4_Sub20 {
 											+ (i_13_ - -i_15_));
 							Class40.aClass4_Sub11_783.method227((byte) -27,
 									i_12_);
-							Class40.aClass4_Sub11_783.method236(181, i_13_);
+							Class40.aClass4_Sub11_783.putInt(181, i_13_);
 							Class71.anInt1477 = 8;
 							Class74.aClass4_Sub11_1516.pointion = 0;
 						} else if ((Class71.anInt1477 ^ 0xffffffff) == -1) {
@@ -201,11 +201,11 @@ public class Class4_Sub20_Sub17 extends Class4_Sub20 {
 									}
 								}
 							} else {
-								Class4_Sub11_Sub1.aCRC32_2688.reset();
-								Class4_Sub11_Sub1.aCRC32_2688.update(
+								ByteBuffer.aCRC32_2688.reset();
+								ByteBuffer.aCRC32_2688.update(
 										Class40.aClass4_Sub11_783.byteBuffer,
 										0, i_16_);
-								int i_22_ = (int) Class4_Sub11_Sub1.aCRC32_2688
+								int i_22_ = (int) ByteBuffer.aCRC32_2688
 										.getValue();
 								if ((i_22_ ^ 0xffffffff) != ((Class4_Sub20_Sub8.aClass4_Sub20_Sub10_2990.anInt3070) ^ 0xffffffff)) {
 									try {

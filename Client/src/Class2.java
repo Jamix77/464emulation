@@ -127,7 +127,7 @@ public class Class2 {
 
 	public static void method43(int arg0) {
 		try {
-			Class66.aClass4_Sub11_Sub1_1328.method264(71, 109);
+			Class66.byteBuffer.putOpcode(71, 109);
 			for (Class4_Sub16 class4_sub16 = ((Class4_Sub16) Class31.aClass16_677
 					.method724((byte) 60)); class4_sub16 != null; class4_sub16 = ((Class4_Sub16) Class31.aClass16_677
 					.method723((byte) -25))) {

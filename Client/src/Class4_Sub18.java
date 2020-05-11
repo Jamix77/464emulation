@@ -156,11 +156,11 @@ public class Class4_Sub18 extends RSFont {
 		arg0.pointion += i_17_ * 3;
 		aByteArray2335 = new byte[i_16_];
 		StreamBuffer class4_sub11 = new StreamBuffer(aByteArray2335);
-		class4_sub11.method236(181, 1297377380);
-		class4_sub11.method236(181, 6);
-		class4_sub11.method207(i > 1 ? 1 : 0, 2018779304);
-		class4_sub11.method207(i, 2018779304);
-		class4_sub11.method207(i_15_, 2018779304);
+		class4_sub11.putInt(181, 1297377380);
+		class4_sub11.putInt(181, 6);
+		class4_sub11.putShort(i > 1 ? 1 : 0, 2018779304);
+		class4_sub11.putShort(i, 2018779304);
+		class4_sub11.putShort(i_15_, 2018779304);
 		arg0.pointion = i_28_;
 		int i_68_ = 0;
 		int i_69_ = 0;
@@ -172,7 +172,7 @@ public class Class4_Sub18 extends RSFont {
 		int[] is = new int[128];
 		i_44_ = 0;
 		for (int i_75_ = 0; i_75_ < i; i_75_++) {
-			class4_sub11.method236(181, 1297379947);
+			class4_sub11.putInt(181, 1297379947);
 			class4_sub11.pointion += 4;
 			int i_76_ = class4_sub11.pointion;
 			int i_77_ = -1;

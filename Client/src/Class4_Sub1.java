@@ -9,7 +9,7 @@ public class Class4_Sub1 extends RSFont {
 	public static Class26 aClass26_1868;
 	public static Class26 aClass26_1869;
 	public static Class26 aClass26_1870;
-	public static Class4_Sub11_Sub1 aClass4_Sub11_Sub1_1854;
+	public static ByteBuffer aClass4_Sub11_Sub1_1854;
 	public static int anInt1855;
 	public static int anInt1857;
 	public static int anInt1859;
@@ -22,7 +22,7 @@ public class Class4_Sub1 extends RSFont {
 		anInt1859 = 0;
 		aClass26_1856 = RS2Font.getRs2PreparedString("<col=ff3000>", false);
 		aClass26_1868 = RS2Font.getRs2PreparedString(" )2> ", false);
-		aClass4_Sub11_Sub1_1854 = new Class4_Sub11_Sub1(5000);
+		aClass4_Sub11_Sub1_1854 = new ByteBuffer(5000);
 		aClass26_1870 = RS2Font.getRs2PreparedString(
 				"go back to the main RuneScape webpage", false);
 		aClass26_1869 = aClass26_1870;

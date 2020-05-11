@@ -6,6 +6,11 @@ import java.io.ObjectInputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+/**
+ * Refactor by jamix77
+ * @author jamix77
+ *
+ */
 public class Class78 {
 	public static Class26 aClass26_1603;
 	public static Class26 aClass26_1605;
@@ -43,14 +48,20 @@ public class Class78 {
 		}
 	}
 
-	public static void method1195(int arg0, int arg1, boolean arg2) {
+	/**
+	 * When a player closes an interface (presumabely only through a button).
+	 * @param arg0 unknown.
+	 * @param arg1 - the hash for the button.
+	 * @param arg2 - unknown, almost always false though.
+	 */
+	public static void closeInterface(int arg0, int arg1, boolean arg2) {
 		try {
 			RS2Font.anInt2761++;
 			if (arg2 == false) {
 				anInt1601++;
-				Class66.aClass4_Sub11_Sub1_1328.method264(240, 114);
-				Class66.aClass4_Sub11_Sub1_1328.method236(181, arg1); // put int
-				Class66.aClass4_Sub11_Sub1_1328.method224(13421, arg0); // addLEShort()
+				Class66.byteBuffer.putOpcode(240, 114);
+				Class66.byteBuffer.putInt(181, arg1); // put int
+				Class66.byteBuffer.putLEShort(13421, arg0); // addLEShort()
 				System.out.println("arg1: " + arg1 + " arg0: " + arg0);
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -85,7 +96,7 @@ public class Class78 {
 				Class33.anInt708 = i_0_;
 		}
 		if (arg0 <= 105)
-			method1195(-92, 41, false);
+			closeInterface(-92, 41, false);
 		i = 128 * Class12.anInt348 - -64;
 		if ((i_0_ ^ 0xffffffff) > (Class33.anInt708 ^ 0xffffffff)) {
 			Class33.anInt708 -= Class1.anInt60
@@ -159,7 +170,7 @@ public class Class78 {
 			Class4_Sub6.anInt1941 = i_7_;
 	}
 
-	public static void method1197(int arg0, byte arg1, Class4_Sub11_Sub1 arg2) {
+	public static void method1197(int arg0, byte arg1, ByteBuffer arg2) {
 		try {
 			if (arg1 == -61) {
 				anInt1600++;
@@ -185,10 +196,10 @@ public class Class78 {
 					}
 					if (bool)
 						break;
-					arg2.method264(arg0, 108);
+					arg2.putOpcode(arg0, 108);
 					arg2.method227((byte) -27, 0);
 					int i = arg2.pointion;
-					arg2.method236(181, class4_sub6.anInt1937);
+					arg2.putInt(181, class4_sub6.anInt1937);
 					for (int i_10_ = 0; ((i_10_ ^ 0xffffffff) > (class4_sub6.anInt1916 ^ 0xffffffff)); i_10_++) {
 						if ((class4_sub6.anIntArray1926[i_10_] ^ 0xffffffff) != -1)
 							arg2.method227((byte) -27,
@@ -207,20 +218,20 @@ public class Class78 {
 										Field field = ((Field) (class4_sub6.aClass22Array1940[i_10_].anObject543));
 										int i_12_ = field.getModifiers();
 										arg2.method227((byte) -27, 0);
-										arg2.method236(181, i_12_);
+										arg2.putInt(181, i_12_);
 									}
 								} else {
 									Field field = ((Field) (class4_sub6.aClass22Array1940[i_10_].anObject543));
 									int i_13_ = field.getInt(null);
 									arg2.method227((byte) -27, 0);
-									arg2.method236(181, i_13_);
+									arg2.putInt(181, i_13_);
 								}
 								if (i_11_ != 3) {
 									if ((i_11_ ^ 0xffffffff) == -5) {
 										Method method = ((Method) (class4_sub6.aClass22Array1927[i_10_].anObject543));
 										int i_14_ = method.getModifiers();
 										arg2.method227((byte) -27, 0);
-										arg2.method236(181, i_14_);
+										arg2.putInt(181, i_14_);
 									}
 								} else {
 									Method method = ((Method) (class4_sub6.aClass22Array1927[i_10_].anObject543));
@@ -239,7 +250,7 @@ public class Class78 {
 										arg2.method227((byte) -27, 0);
 									else if (object instanceof Number) {
 										arg2.method227((byte) -27, 1);
-										arg2.method255(arg1 ^ ~0xb4951ec,
+										arg2.putLong(arg1 ^ ~0xb4951ec,
 												((Number) object).longValue());
 									} else if (object instanceof Class26) {
 										arg2.method227((byte) -27, 2);

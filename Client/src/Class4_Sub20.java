@@ -57,7 +57,7 @@ public class Class4_Sub20 extends RSFont {
 			anInt2361++;
 			if (arg0 == 14931) {
 				for (int i = 0; (RSApplet.anInt12 ^ 0xffffffff) < (i ^ 0xffffffff); i++) {
-					int i_0_ = Class4_Sub11_Sub1.anIntArray2695[i];
+					int i_0_ = ByteBuffer.anIntArray2695[i];
 					Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2 = Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[i_0_];
 					if (class4_sub20_sub7_sub1_sub2 != null)
 						Client.method31(
@@ -285,35 +285,35 @@ public class Class4_Sub20 extends RSFont {
 				int i_18_ = Class30.anIntArray661[i_4_];
 				if ((arg7 ^ 0xffffffff) == -1) {
 					Class4_Sub23.anInt2413++;
-					Class66.aClass4_Sub11_Sub1_1328.method264(50, -88);
-					Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27, i_5_
+					Class66.byteBuffer.putOpcode(50, -88);
+					Class66.byteBuffer.method227((byte) -27, i_5_
 							+ i_5_ + 3); // byte
 				}
 				if (arg7 == 1) {
 					Class11.anInt327++;
-					Class66.aClass4_Sub11_Sub1_1328.method264(143, -25);
-					Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27, 14
+					Class66.byteBuffer.putOpcode(143, -25);
+					Class66.byteBuffer.method227((byte) -27, 14
 							+ i_5_ + (i_5_ - -3));
 				}
 				if ((arg7 ^ 0xffffffff) == -3) {
-					Class66.aClass4_Sub11_Sub1_1328.method264(36, 117);
-					Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27, i_5_
+					Class66.byteBuffer.putOpcode(36, 117);
+					Class66.byteBuffer.method227((byte) -27, i_5_
 							+ i_5_ - -3);
 					Class48.anInt987++;
 				}
-				Class66.aClass4_Sub11_Sub1_1328.method210(
-						(Class4_Sub17.aBooleanArray2320[82]) ? 1 : 0, 128);
-				Class66.aClass4_Sub11_Sub1_1328.method224(13421, i_18_
+				Class66.byteBuffer.putByteS(
+						(Class4_Sub17.aBooleanArray2320[82]) ? 1 : 0, 128);//is running?
+				Class66.byteBuffer.putLEShort(13421, i_18_
 						- -Class4_Sub20_Sub8.anInt2987);
-				Class66.aClass4_Sub11_Sub1_1328.method218(112, i_17_
+				Class66.byteBuffer.putShortA(112, i_17_
 						- -Class6.anInt217);
 				Class67.anInt1352 = Class30.anIntArray661[0];
 				Class1.anInt74 = Class49.anIntArray1003[0];
 				for (int i_19_ = 1; (i_19_ ^ 0xffffffff) > (i_5_ ^ 0xffffffff); i_19_++) {
 					i_4_--;
-					Class66.aClass4_Sub11_Sub1_1328.method210(
+					Class66.byteBuffer.putByteS(
 							Class49.anIntArray1003[i_4_] + -i_17_, arg9 ^ 0x80);
-					Class66.aClass4_Sub11_Sub1_1328.method210(
+					Class66.byteBuffer.putByteS(
 							Class30.anIntArray661[i_4_] + -i_18_, 128);
 				}
 				return true;

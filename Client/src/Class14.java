@@ -301,7 +301,7 @@ public abstract class Class14 {
 									&& ((0x7f & class4_sub20_sub7_sub1_sub2.anInt3270) ^ 0xffffffff) == -65
 									&& ((class4_sub20_sub7_sub1_sub2.anInt3267 & 0x7f) ^ 0xffffffff) == -65) {
 								for (int i_18_ = 0; ((RSApplet.anInt12 ^ 0xffffffff) < (i_18_ ^ 0xffffffff)); i_18_++) {
-									Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2_19_ = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[(Class4_Sub11_Sub1.anIntArray2695[i_18_])]);
+									Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2_19_ = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[(ByteBuffer.anIntArray2695[i_18_])]);
 									if (class4_sub20_sub7_sub1_sub2_19_ != null
 											&& (class4_sub20_sub7_sub1_sub2_19_ != class4_sub20_sub7_sub1_sub2)
 											&& ((class4_sub20_sub7_sub1_sub2_19_.aClass4_Sub20_Sub3_3617.anInt2791) ^ 0xffffffff) == -2
@@ -312,7 +312,7 @@ public abstract class Class14 {
 												i_14_,
 												1170,
 												i_15_,
-												(Class4_Sub11_Sub1.anIntArray2695[i_18_]));
+												(ByteBuffer.anIntArray2695[i_18_]));
 								}
 								for (int i_20_ = 0; i_20_ < Class4_Sub20_Sub7_Sub6.anInt3431; i_20_++) {
 									Class4_Sub20_Sub7_Sub1_Sub1 class4_sub20_sub7_sub1_sub1 = (Class4_Sub20_Sub7_Sub4.aClass4_Sub20_Sub7_Sub1_Sub1Array3358[(Class4_Sub23.anIntArray2432[i_20_])]);
@@ -336,7 +336,7 @@ public abstract class Class14 {
 							if ((class4_sub20_sub7_sub1_sub1.anInt3270 & 0x7f ^ 0xffffffff) == -65
 									&& (class4_sub20_sub7_sub1_sub1.anInt3267 & 0x7f) == 64) {
 								for (int i_21_ = 0; i_21_ < RSApplet.anInt12; i_21_++) {
-									Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2 = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[(Class4_Sub11_Sub1.anIntArray2695[i_21_])]);
+									Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2 = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[(ByteBuffer.anIntArray2695[i_21_])]);
 									if (class4_sub20_sub7_sub1_sub2 != null
 											&& ((class4_sub20_sub7_sub1_sub2.aClass4_Sub20_Sub3_3617.anInt2791) ^ 0xffffffff) == -2
 											&& (((class4_sub20_sub7_sub1_sub1.anInt3270) ^ 0xffffffff) == ((class4_sub20_sub7_sub1_sub2.anInt3270) ^ 0xffffffff))
@@ -346,7 +346,7 @@ public abstract class Class14 {
 												i_14_,
 												1170,
 												i_15_,
-												(Class4_Sub11_Sub1.anIntArray2695[i_21_]));
+												(ByteBuffer.anIntArray2695[i_21_]));
 								}
 								for (int i_22_ = 0; i_22_ < Class4_Sub20_Sub7_Sub6.anInt3431; i_22_++) {
 									Class4_Sub20_Sub7_Sub1_Sub1 class4_sub20_sub7_sub1_sub1_23_ = (Class4_Sub20_Sub7_Sub4.aClass4_Sub20_Sub7_Sub1_Sub1Array3358[(Class4_Sub23.anIntArray2432[i_22_])]);

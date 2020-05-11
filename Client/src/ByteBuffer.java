@@ -3,7 +3,7 @@
  */
 import java.util.zip.CRC32;
 
-public class Class4_Sub11_Sub1 extends StreamBuffer {
+public class ByteBuffer extends StreamBuffer {
 	public static Class19 aClass19_2691;
 	public static Class26 aClass26_2669;
 	public static Class26 aClass26_2676;
@@ -99,8 +99,8 @@ public class Class4_Sub11_Sub1 extends StreamBuffer {
 						Class34.anIntArray1743[RSApplet.anInt23] = 0;
 						RSApplet.anInt23++;
 						Class4_Sub20_Sub1.anInt2718 = Class4_Sub20_Sub10.anInt3053;
-						Class66.aClass4_Sub11_Sub1_1328.method264(197, -102);
-						Class66.aClass4_Sub11_Sub1_1328.method255(189354448,
+						Class66.byteBuffer.putOpcode(197, -102);
+						Class66.byteBuffer.putLong(189354448,
 								arg0);
 					}
 				}
@@ -227,7 +227,7 @@ public class Class4_Sub11_Sub1 extends StreamBuffer {
 
 	public int anInt2665;
 
-	public Class4_Sub11_Sub1(int arg0) {
+	public ByteBuffer(int arg0) {
 		super(arg0);
 	}
 
@@ -243,7 +243,7 @@ public class Class4_Sub11_Sub1 extends StreamBuffer {
 		}
 	}
 
-	public void method264(int arg0, int arg1) {
+	public void putOpcode(int arg0, int arg1) {
 		try {
 			byteBuffer[pointion++] = (byte) (arg0 + aClass33_2685.method884(6));
 			anInt2674++;
@@ -269,7 +269,7 @@ public class Class4_Sub11_Sub1 extends StreamBuffer {
 		try {
 			anInt2681++;
 			if (arg0 != -1432215741)
-				method264(-109, 111);
+				putOpcode(-109, 111);
 			int i = anInt2665 >> -1432215741;
 			int i_0_ = 0;
 			int i_1_ = 8 - (anInt2665 & 0x7);

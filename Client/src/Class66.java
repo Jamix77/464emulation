@@ -11,7 +11,7 @@ public class Class66 {
 			"Press (Wchange your password(W on front page)3", false));
 	public static Class26 aClass26_1325;
 	public static Class26 aClass26_1334;
-	public static Class4_Sub11_Sub1 aClass4_Sub11_Sub1_1328;
+	public static ByteBuffer byteBuffer;
 	public static Class66 aClass66_1330;
 	public static Class66 aClass66_1337;
 	public static Image anImage1326;
@@ -29,14 +29,14 @@ public class Class66 {
 		aClass26_1319 = aClass26_1324;
 		aClass26_1325 = RS2Font.getRs2PreparedString("Connection lost", false);
 		aClass26_1320 = aClass26_1325;
-		aClass4_Sub11_Sub1_1328 = new Class4_Sub11_Sub1(5000);
+		byteBuffer = new ByteBuffer(5000);
 		aClass26_1334 = RS2Font.getRs2PreparedString("(U0a )2 via: ", false);
 		aClass66_1330 = new Class66(64);
 		aClass66_1337 = new Class66(64);
 	}
 
 	public static void method1079(byte arg0) {
-		aClass4_Sub11_Sub1_1328 = null;
+		byteBuffer = null;
 		aClass26_1320 = null;
 		aClass19_Sub1_1336 = null;
 		aClass26_1334 = null;

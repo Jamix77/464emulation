@@ -160,7 +160,7 @@ public class Class35 {
 			if ((class26.method825(-114) ^ 0xffffffff) < -10)
 				return (Class4_Sub24.method639(
 						(new Class26[] {
-								Class4_Sub11_Sub1.aClass26_2693,
+								ByteBuffer.aClass26_2693,
 								class26.method829((byte) 6, 0,
 										-8 + class26.method825(-111)),
 								Class31.aClass26_679,

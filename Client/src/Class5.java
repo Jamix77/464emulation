@@ -2,6 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
+/**
+ * Refactored by jamix77
+ * @author jamix77
+ *
+ */
 public class Class5 {
 	public static Class26 aClass26_176 = RS2Font.getRs2PreparedString(
 			"(U0a )2 non)2existant gosub script)2num: ", false);
@@ -40,12 +45,17 @@ public class Class5 {
 		anIntArray180 = new int[anInt193];
 	}
 
-	public static void method641(long arg0, byte arg1) {
+	/**
+	 * Called to remove a friend from the players friend list.
+	 * @param name - the players name to remove (as a long)
+	 * @param arg1 - unknown
+	 */
+	public static void removeFriendPacket(long name, byte arg1) {
 		try {
 			anInt189++;
-			if ((arg0 ^ 0xffffffffffffffffL) != -1L && arg1 == 68) {
+			if ((name ^ 0xffffffffffffffffL) != -1L && arg1 == 68) {
 				for (int i = 0; i < RSApplet.anInt23; i++) {
-					if ((arg0 ^ 0xffffffffffffffffL) == (Class64.aLongArray1279[i] ^ 0xffffffffffffffffL)) {
+					if ((name ^ 0xffffffffffffffffL) == (Class64.aLongArray1279[i] ^ 0xffffffffffffffffL)) {
 						RSApplet.anInt23--;
 						for (int i_0_ = i; ((RSApplet.anInt23 ^ 0xffffffff) < (i_0_ ^ 0xffffffff)); i_0_++) {
 							Class4_Sub20_Sub5.aClass26Array2893[i_0_] = (Class4_Sub20_Sub5.aClass26Array2893[1 + i_0_]);
@@ -55,19 +65,24 @@ public class Class5 {
 						}
 						Class4_Sub20.anInt2349++;
 						Class4_Sub20_Sub1.anInt2718 = Class4_Sub20_Sub10.anInt3053;
-						Class66.aClass4_Sub11_Sub1_1328.method264(133, -38);
-						Class66.aClass4_Sub11_Sub1_1328.method255(189354448,
-								arg0);
+						Class66.byteBuffer.putOpcode(133, -38);
+						Class66.byteBuffer.putLong(189354448,
+								name);
 						break;
 					}
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, ("b.A("
-					+ arg0 + ',' + arg1 + ')'));
+					+ name + ',' + arg1 + ')'));
 		}
 	}
 
+	/**
+	 * Something to do with region loading.
+	 * @param arg0
+	 * @param arg1
+	 */
 	public static void method642(Class26 arg0, boolean arg1) {
 		try {
 			anInt171++;
@@ -114,10 +129,10 @@ public class Class5 {
 			if (arg1 != false)
 				method644((byte) 55, -24);
 			Class4_Sub20_Sub7_Sub1_Sub2.anInt3614++;
-			Class66.aClass4_Sub11_Sub1_1328.method264(165, 117);
-			Class66.aClass4_Sub11_Sub1_1328.method227((byte) -27,
+			Class66.byteBuffer.putOpcode(165, 117);
+			Class66.byteBuffer.method227((byte) -27,
 					-1 + arg0.method825(-97));
-			Class66.aClass4_Sub11_Sub1_1328.method259(arg0.method805(2, 96),
+			Class66.byteBuffer.method259(arg0.method805(2, 96),
 					18601);
 		} catch (RuntimeException runtimeexception) {
 			throw Class4_Sub20_Sub7_Sub4.method423(runtimeexception, ("b.D("

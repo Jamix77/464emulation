@@ -266,7 +266,7 @@ public class Class4_Sub20_Sub14 extends Class4_Sub20 {
 						StreamBuffer class4_sub11 = new StreamBuffer(4);
 						class4_sub11.method227((byte) -27, 4);
 						class4_sub11.method227((byte) -27, Class9.aByte280);
-						class4_sub11.method207(0, 2018779304);
+						class4_sub11.putShort(0, 2018779304);
 						Class4_Sub20_Sub9.aClass76_3047.method1183(4, 0, 122,
 								class4_sub11.byteBuffer);
 					} catch (java.io.IOException ioexception) {

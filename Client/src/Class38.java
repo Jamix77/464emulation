@@ -53,8 +53,8 @@ public class Class38 {
 			int i = 0;
 			if (arg1 == 12981) {
 				for (/**/; (i ^ 0xffffffff) > (RSApplet.anInt12 ^ 0xffffffff); i++) {
-					Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2 = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[Class4_Sub11_Sub1.anIntArray2695[i]]);
-					int i_0_ = 536870912 - -(Class4_Sub11_Sub1.anIntArray2695[i] << -601574610);
+					Class4_Sub20_Sub7_Sub1_Sub2 class4_sub20_sub7_sub1_sub2 = (Class57.aClass4_Sub20_Sub7_Sub1_Sub2Array1151[ByteBuffer.anIntArray2695[i]]);
+					int i_0_ = 536870912 - -(ByteBuffer.anIntArray2695[i] << -601574610);
 					if (class4_sub20_sub7_sub1_sub2 != null
 							&& class4_sub20_sub7_sub1_sub2.method384(-19456)
 							&& !(class4_sub20_sub7_sub1_sub2.aClass4_Sub20_Sub3_3617.aBoolean2826) == !arg0
