@@ -2,13 +2,13 @@
 A quality emulation of RuneScape as of revision 464.
 
 ```diff
--Entity:
-	-Player
-		-Update masks
-		-Movement
-		-Trading
-		-Following
-			-Clipped
+- Entity:
+	- Player
+		- Update masks
+		- Movement
+		- Trading
+		- Following
+			- Clipped
 	NPC
 		Update masks
 		Movemement
