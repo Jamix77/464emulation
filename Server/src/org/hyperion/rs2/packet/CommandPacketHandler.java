@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import org.hyperion.cache.defs.NPCDefinition;
 import org.hyperion.rs2.model.Animation;
 import org.hyperion.rs2.model.BankScreenType;
 import org.hyperion.rs2.model.Cannon;
@@ -17,7 +18,6 @@ import org.hyperion.rs2.model.Item;
 import org.hyperion.rs2.model.ItemDefinition;
 import org.hyperion.rs2.model.Location;
 import org.hyperion.rs2.model.NPC;
-import org.hyperion.rs2.model.NPCDefinition;
 import org.hyperion.rs2.model.NPCSpawn;
 import org.hyperion.rs2.model.Player;
 import org.hyperion.rs2.model.Player.Rights;
@@ -246,9 +246,9 @@ public class CommandPacketHandler implements PacketHandler {
 				}
 			} else if(command.startsWith("npcbyname")){
 				player.getActionSender().sendMessage("NPC relevance for string \"" + args[1] + "\".");
-				for(NPCDefinition npcDefinition : NPCDefinition.getDefinitions()) {
-					if(npcDefinition != null && npcDefinition.getName().toLowerCase().contains(args[1].replaceAll("_", " "))) {
-						player.getActionSender().sendMessage(npcDefinition.getName() + ":" + npcDefinition.getId());
+				for(NPCDefinition npcDefinition : NPCDefinition.npcDefinitions) {
+					if(npcDefinition != null && npcDefinition.name.toLowerCase().contains(args[1].replaceAll("_", " "))) {
+						player.getActionSender().sendMessage(npcDefinition.name + ":" + npcDefinition.id);
 					}
 				}
 			} else if(command.startsWith("objbyname")){

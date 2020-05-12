@@ -22,6 +22,11 @@ public abstract class Dialogue implements Plugin<Object> {
 	private final Player player;
 	
 	/**
+	 * The NPC who the player is talking to.
+	 */
+	protected final NPC npc;
+	
+	/**
 	 * The index of the dialogue chain.
 	 */
 	private int index = 0;
@@ -41,14 +46,15 @@ public abstract class Dialogue implements Plugin<Object> {
 	 */
 	public abstract void generate();
 	
-	public Dialogue() {this.player=null;}
+	public Dialogue() {this.player=null;this.npc=null;}
 	
 	/**
 	 * Constructor.
 	 * @param player
 	 */
-	public Dialogue(Player player) {
+	public Dialogue(Player player,NPC npc) {
 		this.player = player;
+		this.npc = npc;
 		generate();//generate the dialogue here, after the player is set.
 	}
 	

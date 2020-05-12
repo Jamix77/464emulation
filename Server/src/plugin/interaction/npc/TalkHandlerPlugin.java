@@ -33,15 +33,15 @@ public class TalkHandlerPlugin extends OptionHandler {
 	@Override
 	public boolean handle(Player player, Object node, String option) {
 		NPC npc = (NPC)node;
-		Dialogue d = PluginManager.getDialoguePlugins().get(((NPC)node).getDefinition().getId());
+		Dialogue d = PluginManager.getDialoguePlugins().get(((NPC)node).getDefinition().id);
 		if (d != null) {
 			try {
-				player.getDialogueManager().start((Dialogue)d.newInstance(player));
+				player.getDialogueManager().start((Dialogue)d.newInstance(new Object[] {player,npc}));
 				return true;
 			} catch (Throwable e) {
 			}
 		}
-		player.getActionSender().sendMessage(npc.getDefinition().getName() + " isn't interested in talking.");
+		player.getActionSender().sendMessage(npc.getDefinition().name + " isn't interested in talking.");
 		return true;
 	}
 

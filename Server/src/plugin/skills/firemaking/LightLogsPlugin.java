@@ -53,10 +53,13 @@ public class LightLogsPlugin extends ItemOnHandler {
 		//checks the level
 		if (e.getPlayer().getSkills().getLevel(Skills.FIREMAKING) < fire.getLevel()) {
 			e.getPlayer().getActionSender().sendMessage("You need a firemaking level of " + fire.getLevel() + " to light this log.");
+			return;
 		}
 		//checks if the square has an object or not.
-		if (e.getPlayer().getRegion().getGameObject(e.getPlayer().getLocation()) != null) {
+		if (e.getPlayer().getRegion().objectExists(e.getPlayer().getLocation())) {
+			e.getPlayer().getActionSender().sendMessage(e.getPlayer().getRegion().getGameObject(e.getPlayer().getLocation()).getDefinition().name + "-"+e.getPlayer().getRegion().getGameObject(e.getPlayer().getLocation()).getId());
 			e.getPlayer().getActionSender().sendMessage("You can't light a fire here.");
+			return;
 		}
 		//constructs the ground object for the log
 		GroundItem groundItem = new GroundItem(e.getPlayer().getName(), e.getUsed().getId() == 590 ? ((Item) e.getUsedWith()) : e.getUsed(), e.getPlayer().getLocation());

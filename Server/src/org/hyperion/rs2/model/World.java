@@ -20,6 +20,7 @@ import org.apache.mina.core.future.IoFuture;
 import org.apache.mina.core.future.IoFutureListener;
 import org.hyperion.cache.Cache;
 import org.hyperion.cache.defs.ItemDef;
+import org.hyperion.cache.defs.NPCDefinition;
 import org.hyperion.cache.defs.ObjectDef;
 import org.hyperion.plugin.PluginManager;
 import org.hyperion.rs2.Constants;
@@ -440,7 +441,7 @@ public class World {
 	public void register(NPC npc) {
 		npcs.add(npc);
 		npc.setLocation(npc.getSpawnLocation());
-		CombatNPCDefinition combatDefinition = CombatNPCDefinition.forId(npc.getDefinition().getId());
+		CombatNPCDefinition combatDefinition = CombatNPCDefinition.forId(npc.getDefinition().id);
 		if(combatDefinition != null) {
 			npc.setCombatDefinition(combatDefinition);
 			npc.setCombatCooldownDelay(combatDefinition.getCombatCooldownDelay());

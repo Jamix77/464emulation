@@ -6,14 +6,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import org.hyperion.cache.defs.NPCDefinition;
 import org.hyperion.rs2.model.combat.CombatAction;
 import org.hyperion.rs2.model.combat.CombatState.AttackType;
 import org.hyperion.rs2.model.combat.CombatState.CombatStyle;
 import org.hyperion.rs2.model.combat.impl.AbstractCombatAction;
 import org.hyperion.rs2.model.combat.impl.MagicCombatAction;
+import org.hyperion.rs2.model.combat.impl.MagicCombatAction.Spell;
 import org.hyperion.rs2.model.combat.impl.MeleeCombatAction;
 import org.hyperion.rs2.model.combat.impl.RangeCombatAction;
-import org.hyperion.rs2.model.combat.impl.MagicCombatAction.Spell;
 import org.hyperion.rs2.util.NameUtils;
 import org.hyperion.util.XMLController;
 
@@ -65,7 +66,7 @@ public class CombatNPCDefinition {
 			/**
 			 * Load NPC definitions.
 			 */
-			definitions = new HashMap<Integer, CombatNPCDefinition>(NPCDefinition.getDefinitions().length);
+			definitions = new HashMap<Integer, CombatNPCDefinition>(NPCDefinition.npcDefinitions.length);
 			File file = new File("data/npcCombatDefinition.xml");
 			if(file.exists()) {
 				definitions = XMLController.readXML(file);
@@ -92,7 +93,7 @@ public class CombatNPCDefinition {
 								continue;
 							}
 							String fileName = packageName + f.getName().substring(0, f.getName().length() - 6);
-							String requiredName = packageName + NameUtils.formatName(NPCDefinition.forId(i).getName()).replace(" ", "");
+							String requiredName = packageName + NameUtils.formatName(NPCDefinition.forId(i).name).replace(" ", "");
 							if (!fileName.equals(requiredName)) {
 								continue;
 							}

@@ -294,4 +294,11 @@ public class Region {
 		return surrounding;
 	}
 
+	public boolean objectExists(Location location) {
+		if (this.getGameObject(location) != null) {
+			return this.getGameObject(location).getDefinition().hasActions();
+		}
+		return false;
+	}
+
 }

@@ -4,13 +4,13 @@ package org.hyperion.plugin.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hyperion.cache.defs.NPCDefinition;
 import org.hyperion.cache.defs.ObjectDef;
 import org.hyperion.plugin.Plugin;
 import org.hyperion.plugin.PluginManager;
 import org.hyperion.rs2.model.Entity;
 import org.hyperion.rs2.model.ItemDefinition;
 import org.hyperion.rs2.model.Location;
-import org.hyperion.rs2.model.NPCDefinition;
 import org.hyperion.rs2.model.Player;
 
 /**

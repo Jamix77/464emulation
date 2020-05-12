@@ -1,5 +1,7 @@
 package org.hyperion.rs2.model;
 
+import org.hyperion.cache.defs.NPCDefinition;
+
 /*
  * IMPORTANT MESSAGE - READ BEFORE ADDING NEW METHODS/FIELDS TO THIS CLASS
  * 
@@ -159,12 +161,12 @@ public class NPC extends Mob {
 
 	@Override
 	public int getHeight() {
-		return definition.getSize();
+		return definition.size;
 	}
 
 	@Override
 	public int getWidth() {
-		return definition.getSize();
+		return definition.size;
 	}
 
 	@Override
@@ -236,7 +238,7 @@ public class NPC extends Mob {
 
 	@Override
 	public String getDefinedName() {
-		return definition.getName();
+		return definition.name;
 	}
 
 	@Override

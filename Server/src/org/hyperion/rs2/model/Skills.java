@@ -105,7 +105,7 @@ public class Skills {
 	public int getCombatLevel() {
 		if(mob.isNPC()) {
 			NPC npc = (NPC) mob;
-			return npc.getDefinition().getCombatLevel();
+			return npc.getDefinition().combatLevel;
 		}
 		final int attack = getLevelForExperience(0);
 		final int defence = getLevelForExperience(1);

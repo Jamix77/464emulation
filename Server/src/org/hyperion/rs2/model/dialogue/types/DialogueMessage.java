@@ -50,7 +50,7 @@ public class DialogueMessage implements DialogueType {
 	public void handle(Player player,Dialogue dialogue) {
 		for (int i = 0; i < messages.length;i++)
 		if (entity.isNPC()) {//for npc
-			player.getActionSender().sendDialogue(((NPC)entity).getDefinition().getName(), ActionSender.DialogueType.NPC, ((NPC)entity).getDefinition().getId(), expression,
+			player.getActionSender().sendDialogue(((NPC)entity).getDefinition().name, ActionSender.DialogueType.NPC, ((NPC)entity).getDefinition().id, expression,
 					messages);
 		} else if (entity.isPlayer()) {//for player
 			player.getActionSender().sendDialogue(player.getName(), ActionSender.DialogueType.PLAYER, -1, expression,

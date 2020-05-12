@@ -28,7 +28,7 @@ public class TileControl {
         int buf = 1;
         int offset = 0;
         if (mob.isNPC()) {
-            buf = ((NPC) mob).getDefinition().getSize();
+            buf = ((NPC) mob).getDefinition().size;
         }
         Location[] locations = new Location[buf * buf];
         if (locations.length == 1)

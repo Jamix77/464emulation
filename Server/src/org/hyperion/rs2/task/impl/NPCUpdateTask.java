@@ -199,7 +199,7 @@ public class NPCUpdateTask implements Task {
 		/*
 		 * We now write the NPC type id.
 		 */
-		packet.putBits(14, npc.getDefinition().getId());
+		packet.putBits(14, npc.getDefinition().id);
 
 		
 		/*

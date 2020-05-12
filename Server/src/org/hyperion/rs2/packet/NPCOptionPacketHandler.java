@@ -1,13 +1,12 @@
 package org.hyperion.rs2.packet;
 
+import org.hyperion.cache.defs.NPCDefinition;
 import org.hyperion.plugin.PluginManager;
 import org.hyperion.plugin.impl.OptionHandler;
 import org.hyperion.rs2.Constants;
-import org.hyperion.rs2.ScriptManager;
 import org.hyperion.rs2.action.Action;
 import org.hyperion.rs2.model.Mob.InteractionMode;
 import org.hyperion.rs2.model.NPC;
-import org.hyperion.rs2.model.NPCDefinition;
 import org.hyperion.rs2.model.Player;
 import org.hyperion.rs2.model.World;
 import org.hyperion.rs2.model.combat.impl.MagicCombatAction;
@@ -72,7 +71,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 
 		final NPC npc = (NPC) World.getWorld().getNPCs().get(id);
 
-		player.getActionSender().sendDebugPacket(packet.getOpcode(), "NpcOpt1", new Object[] { "ID: " + npc.getDefinition().getId(), "Index: " + id });
+		player.getActionSender().sendDebugPacket(packet.getOpcode(), "NpcOpt1", new Object[] { "ID: " + npc.getDefinition().id, "Index: " + id });
 		
 		if(npc != null) {
 			player.setInteractingEntity(InteractionMode.TALK, npc);
@@ -84,12 +83,12 @@ public class NPCOptionPacketHandler implements PacketHandler {
 						this.stop();
 						return;
 					}
-					OptionHandler p = npc.getDefinition().getHandlers().get("option:" + npc.getDefinition().getInteractionMenu()[0].toLowerCase());
+					OptionHandler p = npc.getDefinition().getHandlers().get("option:" + npc.getDefinition().actions[0].toLowerCase());
 					if (p == null) {
-						p = (OptionHandler) PluginManager.getOptionHandlerPlugins().get("npc:" + npc.getDefinition().getInteractionMenu()[0].toLowerCase());
+						p = (OptionHandler) PluginManager.getOptionHandlerPlugins().get("npc:" + npc.getDefinition().actions[0].toLowerCase());
 					}
 					if (p != null) {
-						p.handle(player, npc, npc.getDefinition().getInteractionMenu()[0].toLowerCase());
+						p.handle(player, npc, npc.getDefinition().actions[0].toLowerCase());
 					}
 					npc.face(player.getLocation());
 					this.stop();
@@ -108,9 +107,9 @@ public class NPCOptionPacketHandler implements PacketHandler {
 				}			
 			};
 			int distance = 1;
-			if(npc.getDefinition().getName().toLowerCase().contains("banker")
-							|| npc.getDefinition().getName().toLowerCase().contains("emily")
-							|| npc.getDefinition().getName().toLowerCase().contains("zambo")) {
+			if(npc.getDefinition().name.toLowerCase().contains("banker")
+							|| npc.getDefinition().name.toLowerCase().contains("emily")
+							|| npc.getDefinition().name.toLowerCase().contains("zambo")) {
 				distance = 2;
 			}
 			player.addCoordinateAction(player.getWidth(), player.getHeight(), npc.getLocation(), npc.getWidth(), npc.getHeight(), distance, action);
@@ -134,7 +133,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 
 		final NPC npc = (NPC) World.getWorld().getNPCs().get(id);
 
-		player.getActionSender().sendDebugPacket(packet.getOpcode(), "NpcOpt2", new Object[] { "ID: " + npc.getDefinition().getId(), "Index: " + id });
+		player.getActionSender().sendDebugPacket(packet.getOpcode(), "NpcOpt2", new Object[] { "ID: " + npc.getDefinition().id, "Index: " + id });
 		
 		if(npc != null) {
 			player.setInteractingEntity(InteractionMode.TALK, npc);
@@ -146,12 +145,12 @@ public class NPCOptionPacketHandler implements PacketHandler {
 						this.stop();
 						return;
 					}
-					OptionHandler p = npc.getDefinition().getHandlers().get("option:" + npc.getDefinition().getInteractionMenu()[1].toLowerCase());
+					OptionHandler p = npc.getDefinition().getHandlers().get("option:" + npc.getDefinition().actions[1].toLowerCase());
 					if (p == null) {
-						p = (OptionHandler) PluginManager.getOptionHandlerPlugins().get("npc:" + npc.getDefinition().getInteractionMenu()[1].toLowerCase());
+						p = (OptionHandler) PluginManager.getOptionHandlerPlugins().get("npc:" + npc.getDefinition().actions[1].toLowerCase());
 					}
 					if (p != null) {
-						p.handle(player, npc, npc.getDefinition().getInteractionMenu()[1].toLowerCase());
+						p.handle(player, npc, npc.getDefinition().actions[1].toLowerCase());
 					}
 					npc.face(player.getLocation());
 					this.stop();
@@ -170,9 +169,9 @@ public class NPCOptionPacketHandler implements PacketHandler {
 				}			
 			};
 			int distance = 1;
-			if(npc.getDefinition().getName().toLowerCase().contains("banker")
-							|| npc.getDefinition().getName().toLowerCase().contains("emily")
-							|| npc.getDefinition().getName().toLowerCase().contains("zambo")) {
+			if(npc.getDefinition().name.toLowerCase().contains("banker")
+							|| npc.getDefinition().name.toLowerCase().contains("emily")
+							|| npc.getDefinition().name.toLowerCase().contains("zambo")) {
 				distance = 2;
 			}
 			player.addCoordinateAction(player.getWidth(), player.getHeight(), npc.getLocation(), npc.getWidth(), npc.getHeight(), distance, action);
@@ -196,7 +195,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 
 		final NPC npc = (NPC) World.getWorld().getNPCs().get(id);
 
-		player.getActionSender().sendDebugPacket(packet.getOpcode(), "NpcAttack", new Object[] { "ID: " + npc.getDefinition().getId(), "Index: " + id });
+		player.getActionSender().sendDebugPacket(packet.getOpcode(), "NpcAttack", new Object[] { "ID: " + npc.getDefinition().id, "Index: " + id });
 		
 		if(npc != null) {
 		//player.forceChat("men");
@@ -225,7 +224,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 
 		NPC npc = (NPC) World.getWorld().getNPCs().get(id);
 
-		player.getActionSender().sendDebugPacket(packet.getOpcode(), "NpcSpell", new Object[] { "ID: " + npc.getDefinition().getId(), "Index: " + id, "Button: " + childButton });
+		player.getActionSender().sendDebugPacket(packet.getOpcode(), "NpcSpell", new Object[] { "ID: " + npc.getDefinition().id, "Index: " + id, "Button: " + childButton });
 		
 		Spell spell = Spell.forId(childButton, SpellBook.forId(player.getCombatState().getSpellBook()));
 		if(npc != null && spell != null) {
@@ -256,7 +255,7 @@ public class NPCOptionPacketHandler implements PacketHandler {
 		
 		NPCDefinition npcDef = NPCDefinition.forId(id);
 		if(npcDef != null) {
-			player.getActionSender().sendMessage(npcDef.getDescription());
+			player.getActionSender().sendMessage(npcDef.desc);
 		}
 	}
 
