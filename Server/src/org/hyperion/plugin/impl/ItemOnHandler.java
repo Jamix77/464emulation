@@ -64,11 +64,19 @@ public abstract class ItemOnHandler implements Plugin<Object> {
 		}
 		
 		public ItemOnType type() {
-			return (usedWith instanceof Item ? ItemOnType.ITEM_ON_ITEM : (usedWith instanceof GameObject ? ItemOnType.ITEM_ON_OBJECT : (usedWith instanceof NPC ? ItemOnType.ITEM_ON_NPC : (usedWith instanceof Player ? ItemOnType.ITEM_ON_PLAYER : ItemOnType.UNKNOWN))));
+			return (getUsedWith() instanceof Item ? ItemOnType.ITEM_ON_ITEM : (getUsedWith() instanceof GameObject ? ItemOnType.ITEM_ON_OBJECT : (getUsedWith() instanceof NPC ? ItemOnType.ITEM_ON_NPC : (getUsedWith() instanceof Player ? ItemOnType.ITEM_ON_PLAYER : ItemOnType.UNKNOWN))));
 		}
 
 		public Player getPlayer() {
 			return player;
+		}
+
+		public Item getUsed() {
+			return used;
+		}
+
+		public Object getUsedWith() {
+			return usedWith;
 		}
 		
 	}

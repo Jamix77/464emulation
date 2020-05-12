@@ -24,7 +24,7 @@ import org.hyperion.rs2.util.Misc;
 public class WoodcuttingPlugin extends OptionHandler {
 
 	@Override
-	public Plugin<Object> newInstance(Object arg) throws Throwable {
+	public Plugin<Object> newInstance(Object arg) {
 		return new WoodcuttingPlugin();
 	}
 

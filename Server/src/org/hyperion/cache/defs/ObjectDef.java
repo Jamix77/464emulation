@@ -47,6 +47,7 @@ public final class ObjectDef {
     public boolean aBoolean1677;
     public int[] models;
     public int lightness;
+    public String desc;
 
     public static boolean projectileCliped = true;
 	public int clipType = 2;
@@ -105,6 +106,13 @@ public final class ObjectDef {
 		readOpcodes(new InputStream(data));
 		method332();
 	}
+	
+	public static void init() {
+		for (int i = 0; i < Cache.getCacheFileManagers()[2].getFilesSize(6);i++) {
+			ObjectDef.forId(i);
+		}
+		
+	}
 
 	private void setDefaultsVariableValues() {
 		groundDecorationSprite = -1;
@@ -134,6 +142,7 @@ public final class ObjectDef {
 		anInt1673 = 16;
 		aBoolean1677 = false;
 		lightness = 0;
+		desc = "null";
 	}
 
 	private final void readOpcodes(InputStream stream, int opcode) {
@@ -153,6 +162,9 @@ public final class ObjectDef {
 		}
     	if (opcode == 2) {
     		name = stream.readString();
+    	}
+    	if (opcode == 3) {
+    		desc = stream.readString();
     	}
     	if (opcode == 5) {
     		int size = stream.readUnsignedByte();

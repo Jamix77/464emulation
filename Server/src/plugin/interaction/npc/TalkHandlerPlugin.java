@@ -21,7 +21,7 @@ import org.hyperion.rs2.model.dialogue.Dialogue;
 public class TalkHandlerPlugin extends OptionHandler {
 
 	@Override
-	public Plugin<Object> newInstance(Object arg) throws Throwable {
+	public Plugin<Object> newInstance(Object arg){
 		return new TalkHandlerPlugin();
 	}
 

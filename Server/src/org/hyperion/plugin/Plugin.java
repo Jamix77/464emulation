@@ -12,7 +12,7 @@ public interface Plugin<T> {
 	 * @param arg The argument.
 	 * @return The plugin instance created.
 	 */
-	public Plugin<T> newInstance(T arg) throws Throwable;
+	public Plugin<T> newInstance(T arg);
 	
 	/**
 	 * Initilises the plugin on startup.

@@ -23,7 +23,7 @@ import org.hyperion.rs2.tickable.Tickable;
 public class BoneBuryingPlugin extends OptionHandler {
 	
 	@Override
-	public Plugin<Object> newInstance(Object arg) throws Throwable {
+	public Plugin<Object> newInstance(Object arg) {
 		return new BoneBuryingPlugin();
 	}
 

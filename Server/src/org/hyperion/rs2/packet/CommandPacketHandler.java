@@ -61,6 +61,12 @@ public class CommandPacketHandler implements PacketHandler {
 //				player.getActionSender().playSound(Sound.create(Integer.parseInt(args[1]), (byte) 1, 0));
 				player.getActionSender().sendFollowing(World.getWorld().getPlayers().get(2), 1);
 				return;
+			} else if (command.startsWith("qstage")) {
+				
+				player.getActionSender().sendMessage(player.getQuestRepository().getStage(args[1])+"");
+			} else if (command.startsWith("setstage")) {
+				
+				player.getQuestRepository().get(args[1]).setStage(Integer.parseInt(args[2]));
 			} else if(command.equals("cannon")) {
 //				Region r = World.getWorld().getRegionManager().getRegionByLocation(player.getLocation());
 //				for(GameObject obj : r.getGameObjects()) {

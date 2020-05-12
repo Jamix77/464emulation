@@ -57,7 +57,7 @@ public class TestDialogue extends Dialogue {
 	} 
 
 	@Override
-	public Plugin<Object> newInstance(Object arg) throws Throwable {
+	public Plugin<Object> newInstance(Object arg) {
 		return new TestDialogue((Player)arg);
 	}
 

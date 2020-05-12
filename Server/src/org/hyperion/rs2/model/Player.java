@@ -33,6 +33,8 @@ import org.hyperion.rs2.model.container.Container.Type;
 import org.hyperion.rs2.model.container.Equipment;
 import org.hyperion.rs2.model.container.Inventory;
 import org.hyperion.rs2.model.container.Trade;
+import org.hyperion.rs2.model.dialogue.DialogueManager;
+import org.hyperion.rs2.model.quest.QuestRepository;
 import org.hyperion.rs2.model.region.Region;
 import org.hyperion.rs2.net.ActionSender;
 import org.hyperion.rs2.net.ISAACCipher;
@@ -40,7 +42,6 @@ import org.hyperion.rs2.net.Packet;
 import org.hyperion.rs2.util.IoBufferUtils;
 import org.hyperion.rs2.util.NameUtils;
 import org.hyperion.rs2.util.TextUtils;
-import org.hyperion.rs2.model.dialogue.DialogueManager;
 
 
 /**
@@ -313,6 +314,11 @@ public class Player extends Mob implements Persistable {
 	 * The player's dialogue manager.
 	 */
 	private final DialogueManager dialogueManager = new DialogueManager(this);
+	
+	/**
+	 * The player's quest repository, for storing quest stuff.
+	 */
+	private final QuestRepository questRepository = new QuestRepository(this);
 
 	/*
 	 * Cached details.
@@ -1476,6 +1482,10 @@ public class Player extends Mob implements Persistable {
 
 	public DialogueManager getDialogueManager() {
 		return dialogueManager;
+	}
+
+	public QuestRepository getQuestRepository() {
+		return questRepository;
 	}
 
   }

@@ -1,5 +1,6 @@
 package org.hyperion.rs2.packet;
 
+import org.hyperion.cache.defs.ObjectDef;
 import org.hyperion.plugin.PluginManager;
 import org.hyperion.plugin.impl.ItemOnHandler;
 import org.hyperion.plugin.impl.ItemOnHandler.ItemOnEvent;
@@ -52,7 +53,7 @@ public class ObjectOptionPacketHandler implements PacketHandler {
 				"ItemExamine", new Object[] { "ID: " + objectId });
 		// player.getActionSender().sendMessage(ObjectDef.forId(objectId).name +
 		// " " + objectId);
-		player.getActionSender().sendMessage("rofl examine obj.");
+		player.getActionSender().sendMessage(ObjectDef.forId(objectId).name);
 	}
 
 	/**

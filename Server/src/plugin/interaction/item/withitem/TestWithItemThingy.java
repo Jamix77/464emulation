@@ -15,7 +15,7 @@ public class TestWithItemThingy extends ItemOnHandler {
 	}
 
 	@Override
-	public Plugin<Object> newInstance(Object arg) throws Throwable {
+	public Plugin<Object> newInstance(Object arg) {
 		return new TestWithItemThingy();
 	}
 

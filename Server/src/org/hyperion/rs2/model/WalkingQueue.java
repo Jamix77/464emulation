@@ -4,6 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 import org.hyperion.rs2.Constants;
+import org.hyperion.rs2.clipping.RegionClipping;
 import org.hyperion.rs2.tickable.impl.EnergyRestoreTick;
 import org.hyperion.rs2.util.DirectionUtils;
 
@@ -518,6 +519,31 @@ public class WalkingQueue {
 			 * And return the direction.
 			 */
 			return p;
+		}
+	}
+
+	public void moveStep() {
+		reset();
+		if (RegionClipping.blockedWest(mob.getLocation())) {
+			if (RegionClipping.blockedSouth(mob.getLocation())) {
+				if (RegionClipping.blockedEast(mob.getLocation())) {
+					if (RegionClipping.blockedNorth(mob.getLocation())) {
+						
+					} else {
+						this.addStep(mob.getLocation().getX(), mob.getLocation().getY()+1);
+						return;
+					}
+				} else {
+					this.addStep(mob.getLocation().getX()+1, mob.getLocation().getY());
+					return;
+				}
+			} else {
+				this.addStep(mob.getLocation().getX(), mob.getLocation().getY()-1);
+				return;
+			}
+		} else {
+			this.addStep(mob.getLocation().getX()-1, mob.getLocation().getY());
+			return;
 		}
 	}
 
